@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    color: black;
   }
   
   *,
@@ -11,7 +12,6 @@ html {
   a {
     text-decoration: none;
     display: inline-block;
-    color: $main-font-color;
   }
   
   img {
