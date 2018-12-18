@@ -526,10 +526,32 @@ ul {
   text-transform: uppercase;
   padding: 20px 50px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 1rem;
   color: #ffffff;
   border-radius: 14px;
   background-color: #EA5538;
+  -webkit-animation: radial-pulse 1s infinite;
+  animation: radial-pulse 1s infinite;
+}
+
+@-webkit-keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(240, 121, 121, 0.85);
+  }
+
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(240, 121, 121, 0.85);
+  }
+
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  }
 }
 
 /*----TABLET----*/
@@ -574,6 +596,12 @@ ul {
 
   .nav-icon {
     display: none;
+  }
+
+  .main-title {
+    font-size: 2.75rem;
+    margin-bottom: 80px;
+    margin-top: 0;
   }
 }
 

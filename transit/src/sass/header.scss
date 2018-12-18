@@ -4,7 +4,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-family: $main-font-family;
-
 }
 
 .header {
@@ -119,10 +118,22 @@
   text-transform: uppercase;
   padding: 20px 50px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 1rem;
   color: $main-font-color;
   border-radius: 14px;
   background-color: $main-btn-color;
+  animation: radial-pulse 1s infinite;
+}
+
+ 
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(240, 121, 121, 0.85);
+  }
+ 
+  100% {
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+  }
 }
 
 /*----TABLET----*/
@@ -172,5 +183,12 @@
 
   .nav-icon {
     display: none;
+  }
+
+
+  .main-title {
+    font-size: 2.75rem;
+    margin-bottom: 80px;
+    margin-top: 0;
   }
 }
