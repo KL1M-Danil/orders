@@ -430,7 +430,7 @@ li {
 }
 
 ul {
-  margin-bottom: 0;
+  margin: 0;
   padding-left: 0;
 }
 
@@ -442,10 +442,9 @@ ul {
   background-color: #ffffff;
   text-transform: uppercase;
   width: 100%;
-  margin: auto;
-  position: fixed;
   padding-bottom: 20px;
   padding-top: 20px;
+  max-width: 1400px;
 }
 
 .logo {
@@ -454,6 +453,7 @@ ul {
 
 .nav-container {
   overflow: hidden;
+  margin: auto;
 }
 
 .nav-mobile {
@@ -468,6 +468,7 @@ ul {
 .nav-list {
   text-align: center;
   margin-right: 10%;
+  margin-top: 30px;
 }
 
 .nav-item {
@@ -504,16 +505,21 @@ ul {
   margin: 0;
 }
 
+/*-----PROMO-----*/
+
 .promo-container {
-  margin-top: 70px;
   color: #000000;
   font-family: GothamPro, sans-serif;
   text-align: center;
   display: flex;
+  margin: auto;
+  margin-top: 70px;
 }
 
 .promo-box {
-  flex: 0 0 550px;
+  margin: auto;
+  max-width: 480px;
+  margin-bottom: 50px;
 }
 
 .promo-title {
@@ -546,7 +552,7 @@ ul {
 }
 
 .callback-form {
-  max-width: 420px;
+  max-width: 90%;
   text-align: center;
   margin: auto;
 }
@@ -588,11 +594,108 @@ ul {
   width: 100%;
 }
 
+.promo-img {
+  width: 100%;
+  height: 200px;
+}
+
+/*----SERVICE----*/
+
+.service-container {
+  color: #000000;
+  font-family: GothamPro, sans-serif;
+  margin: auto;
+  max-width: 480px;
+}
+
+.service-box {
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 55px;
+}
+
+.service-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.service-name {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.service-icon {
+  flex: 0 0 10%;
+}
+
+/*----CALCULATOR----*/
+
+.calculator {
+  color: #000000;
+  font-family: GothamPro, sans-serif;
+  max-width: 480px;
+  margin: auto;
+}
+
+.calculator-contacts {
+  max-width: 90%;
+}
+
+.calc-input {
+  width: 100%;
+  padding: 18px 18px 13px;
+  margin-bottom: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+@media (min-width: 520px) {
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .service-item {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 767px) {
+  .service-container {
+    max-width: 1350px;
+    text-align: center;
+  }
+
+  .service-item {
+    flex-basis: 23%;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .service-name {
+    font-size: 20px;
+  }
+}
+
 @media (min-width: 800px) {
   .header {
     height: 100px;
     padding: 0;
     background-color: transparent;
+    margin: auto;
   }
 
   .logo {
@@ -631,11 +734,20 @@ ul {
   }
 
   .promo-container {
-    margin-top: 120px;
+    margin-top: 50px;
+    max-width: 1350px;
+  }
+
+  .promo-box {
+    flex: 0 0 550px;
   }
 }
 
 @media (max-width: 800px) {
+  .header {
+    position: fixed;
+  }
+
   .nav {
     width: 100%;
   }

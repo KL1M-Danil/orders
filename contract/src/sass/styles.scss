@@ -1,9 +1,339 @@
 /*
    Import partials below
 */
+
 @import "./normalize";
 @import "./fonts";
 @import "./base";
 @import "./variables";
 @import "./header";
 @import "./promo";
+
+.header {
+  color: $main-font-color;
+  font-family: $main-font-family;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  width: 100%;
+
+  padding-bottom: 20px;
+  padding-top: 20px;
+  max-width: 1400px;
+}
+
+.logo {
+  margin-left: 20px;
+}
+
+.nav-container {
+  overflow: hidden;
+  margin: auto;
+}
+
+.nav-mobile {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.nav-icon {
+  font-size: 1.375rem;
+}
+
+.nav-list {
+  text-align: center;
+  margin-right: 10%;
+  margin-top: 30px;
+}
+
+.nav-item {
+  margin-bottom: 15px;
+  font-size: 0.875rem;
+}
+
+.nav-link {
+  color: $main-font-color;
+  font-weight: 500;
+}
+
+.nav-tel,
+.nav-tel-mobile {
+  color: $main-font-color;
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.nav-btn {
+  font-size: 0.875rem;
+  padding: 5px 15px;
+  background-color: $main-btn-color;
+  border-radius: 50px;
+  color: $btn-font-color;
+}
+
+.nav-list-close {
+  display: none;
+}
+
+.nav-close {
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .header {
+    position: fixed;
+  }
+
+  .nav {
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .header {
+    height: 100px;
+    padding: 0;
+    background-color: transparent;
+    margin: auto;
+  }
+
+  .logo {
+    margin-top: 45px;
+  }
+
+  .nav {
+    margin-top: 45px;
+  }
+
+  .nav-list {
+    display: flex;
+    margin: 0;
+  }
+
+  .nav-item {
+    margin-right: 30px;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+  }
+
+  .nav-link {
+    color: $main-font-color;
+  }
+
+  .nav-tel {
+    color: $main-font-color;
+  }
+
+  .nav-tel-mobile {
+    display: none;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+}
+
+/*-----PROMO-----*/
+
+.promo-container {
+  color: $main-font-color;
+  font-family: $main-font-family;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.promo-box {
+  margin: auto;
+  max-width: 480px;
+  margin-bottom: 50px;
+}
+
+.promo-title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.promo-title b {
+  font-weight: 700;
+}
+
+.promo-subtitle {
+  margin: auto;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  width: 80%;
+}
+
+.promo-text {
+  margin: auto;
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  width: 80%;
+  color: #ee3b23;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.callback-form {
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+.input-phone {
+  width: 100%;
+  padding: 18px 18px 13px;
+  margin-bottom: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-phone-lable {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-phone-number {
+  background-color: transparent;
+  border: none;
+}
+
+.callback-btn {
+  background-color: #ee3b23;
+  transition: background-color 0.3s ease-in;
+  box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);
+  border: none;
+  border-radius: 8px;
+  font-size: 19px;
+  font-weight: 400;
+  color: $btn-font-color;
+  padding: 24px;
+  width: 100%;
+}
+
+.promo-img {
+  width: 100%;
+  height: 200px;
+}
+
+@media (max-width: 800px) {
+  .promo-img {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .promo-container {
+    margin-top: 50px;
+    max-width: 1350px;
+  }
+
+  .promo-box {
+    flex: 0 0 550px;
+  }
+}
+
+/*----SERVICE----*/
+
+.service-container {
+  color: $main-font-color;
+  font-family: $main-font-family;
+  margin: auto;
+  max-width: 480px;
+}
+
+.service-box {
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 55px;
+}
+
+.service-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.service-name {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.service-icon {
+  flex: 0 0 10%;
+}
+
+@media (min-width: 520px) {
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .service-item {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 767px) {
+  .service-container {
+    max-width: 1350px;
+    text-align: center;
+  }
+
+  .service-item {
+    flex-basis: 23%;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .service-name {
+    font-size: 20px;
+  }
+}
+
+/*----CALCULATOR----*/
+
+.calculator {
+  color: $main-font-color;
+  font-family: $main-font-family;
+  max-width: 480px;
+  margin: auto;
+}
+
+.calculator-contacts {
+  max-width: 90%;
+}
+
+.calc-input {
+  width: 100%;
+  padding: 18px 18px 13px;
+  margin-bottom: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}

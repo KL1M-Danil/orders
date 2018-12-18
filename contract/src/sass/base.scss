@@ -1,31 +1,30 @@
 html {
-    box-sizing: border-box;
-    color: black;
+  box-sizing: border-box;
+  color: black;
+}
 
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  a {
-    text-decoration: none;
-    display: inline-block;
-  }
-  
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  li {
-    list-style-type: none;
-  }
-  
-  ul {
-    margin-bottom: 0;
-    padding-left: 0;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
