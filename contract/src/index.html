@@ -18,14 +18,15 @@
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="format-detection" content="telephone=no" />
 
-    <title>Contract</title>
+    <title>RTK</title>
     <link rel="stylesheet" href="css/styles.min.css" />
   </head>
 
   <body>
+    <!--====NAVIGATION====-->
     <div class="nav-container">
       <header class="header">
-        <a href="#" class="logo">LOGO</a>
+        <a href="#" class="logo"><img src="#" alt="LOGO"/></a>
         <nav class="nav js-nav">
           <div class="nav-mobile">
             <a href="tel:+380678800613" class="nav-tel-mobile"
@@ -51,6 +52,7 @@
         </nav>
       </header>
     </div>
+    <!--====PROMO====-->
     <div class="promo-container">
       <div class="promo-box">
         <h1 class="promo-title">
@@ -65,16 +67,17 @@
         </p>
         <div class="callback-form">
           <div class="input-phone">
-            <span class="input-phone-lable">Мобильный телефон</span>
+            <span class="input-label">Мобильный телефон</span>
             <input type="phone" class="input-phone-number" placeholder="+380" />
           </div>
           <button class="callback-btn">Расчитать стоимость перевозки</button>
         </div>
       </div>
       <div class="promo-img">
-        <img src="/build/images/promo2.jpg" alt="ssss" />
+        <img src="/build/images/promo2.jpg" alt="transit car" />
       </div>
     </div>
+    <!--====SERVICE====-->
     <div class="service-container">
       <div class="service-box">
         <h3 class="service-title">Услуги</h3>
@@ -151,21 +154,27 @@
         </ul>
       </div>
     </div>
+    <!--=====CALCULATOR====-->
     <form class="calculator" action="send.php" method="post">
       <div class="calculator-contacts">
         <div class="calc-input">
-          <span class="input-phone-lable">Мобильный телефон</span>
-          <input type="phone" class="input-phone-number" placeholder="+380" required />
+          <span class="input-label">Мобильный телефон</span>
+          <input
+            type="phone"
+            class="input-phone-number"
+            placeholder="+380"
+            required
+          />
         </div>
         <div class="calc-choice">
           <div class="choice-text">
-            <span class="input-phone-lable">Кузов</span>
+            <span class="input-label">Кузов</span>
             <div class="choice-menu">
-              <select name="menu" size="1">
+              <select name="choice-size" size="1">
                 <option selected="selected" value="first"
                   >Закрытый кузов (3 метра)</option
                 >
-                <option value="second">Закрытый кузов (4 метра) </option>
+                <option value="second">Закрытый кузов (4 метра)</option>
                 <option value="third">Закрытый кузов (5.7 метра)</option>
               </select>
             </div>
@@ -174,8 +183,7 @@
         </div>
         <div></div>
       </div>
-      <!--
-        <div class="calc-options">
+      <!--<div class="calc-options">
           <ul class="options-list">
             <li class="options-item">
               <span class="options-title">Высота до:</span><span>1.5м</span>
@@ -191,8 +199,7 @@
               <span class="options-title"></span><span></span>
             </li>
           </ul>
-        </div>
-      -->
+        </div>-->
       <div class="calc-options">
         <ul class="options-list">
           <li class="options-item">
@@ -216,25 +223,32 @@
         </div>
       </div>
       <div class="adress-input">
-        <img src="/build/images/point.png" alt="" class="adress-icon" />
+        <img
+          src="/build/images/point.png"
+          alt="first adress point"
+          class="adress-icon"
+        />
         <div>
-          <span class="input-phone-lable">Откуда</span>
-          <input type="phone" class="input-phone-number" required/>
+          <span class="input-label">Откуда</span>
+          <input type="phone" class="input-phone-number" required />
         </div>
       </div>
       <div class="adress-input">
-        <i class="adress-icon"></i>
+        <img
+          src="/build/images/point.png"
+          alt="second adress point"
+          class="adress-icon"
+        />
         <div>
-          <span class="input-phone-lable">Куда</span>
-          <input type="text" class="input-phone-number" required/>
+          <span class="input-label">Куда</span>
+          <input type="text" class="input-phone-number" required />
         </div>
       </div>
-
       <div class="calc-choice-loader">
         <div class="choice-text">
-          <span class="input-phone-lable">Услуги грузчиков</span>
+          <span class="input-label">Услуги грузчиков</span>
           <div class="choice-menu">
-            <select name="menu" size="1">
+            <select name="choice-loader" size="1">
               <option selected="selected" value="first">Без грузчиков</option>
               <option value="second">1 Грузчик</option>
               <option value="third">2 Грузчик</option>
@@ -243,12 +257,11 @@
         </div>
         <i class="choice-icon"></i>
       </div>
-
       <div class="calc-choice-rent">
         <div class="choice-text">
-          <span class="input-phone-lable">Срок аренды</span>
+          <span class="input-label">Срок аренды</span>
           <div class="choice-menu">
-            <select name="menu" size="1">
+            <select name="choice-rent" size="1">
               <option value="first">1 час</option>
               <option value="second">1,5 час</option>
               <option value="third">2 час</option>
@@ -262,12 +275,11 @@
         </div>
         <i class="choice-icon"></i>
       </div>
-
       <div class="calc-choice-time">
         <div class="choice-text">
-          <span class="input-phone-lable">Время подачи</span>
+          <span class="input-label">Время подачи</span>
           <div class="choice-menu">
-            <select name="menu" size="1">
+            <select name="choice-time" size="1">
               <option selected="selected" value="first">Ближайшее время</option>
               <option value="second">Через 30 мин</option>
               <option value="third">Через 1 час</option>
@@ -278,17 +290,18 @@
         </div>
         <i class="choice-icon"></i>
       </div>
-
       <div class="calc-choice-date">
-        <span class="input-phone-lable">Дата</span>
-        <input type="date" name="calendar" />
+        <span class="input-label">Дата</span>
+        <input type="date" name="choice-data" />
       </div>
-
       <div class="calc-input-description">
-          <span class="input-phone-lable">Опишите кратко груз</span>
-          <input type="text" class="input-phone-number" placeholder="Объем, масса, характер груза" />
-        </div>
-
+        <span class="input-label">Опишите кратко груз</span>
+        <input
+          type="text"
+          class="input-phone-number"
+          placeholder="Объем, масса, характер груза"
+        />
+      </div>
     </form>
 
     <script src="js/scripts.min.js"></script>

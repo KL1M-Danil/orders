@@ -6,8 +6,9 @@
 @import "./fonts";
 @import "./base";
 @import "./variables";
-@import "./header";
-@import "./promo";
+@import "./media";
+
+/*----HEADER----*/
 
 .header {
   color: $main-font-color;
@@ -81,60 +82,6 @@
   margin: 0;
 }
 
-@media (max-width: 800px) {
-  .header {
-    position: fixed;
-  }
-
-  .nav {
-    width: 100%;
-  }
-}
-
-@media (min-width: 800px) {
-  .header {
-    height: 100px;
-    padding: 0;
-    background-color: transparent;
-    margin: auto;
-  }
-
-  .logo {
-    margin-top: 45px;
-  }
-
-  .nav {
-    margin-top: 45px;
-  }
-
-  .nav-list {
-    display: flex;
-    margin: 0;
-  }
-
-  .nav-item {
-    margin-right: 30px;
-    margin-bottom: 0;
-    font-size: 0.875rem;
-  }
-
-  .nav-link {
-    color: $main-font-color;
-  }
-
-  .nav-tel {
-    color: $main-font-color;
-  }
-
-  .nav-tel-mobile {
-    display: none;
-  }
-
-  .nav-icon {
-    display: none;
-  }
-}
-
 /*-----PROMO-----*/
 
 .promo-container {
@@ -195,13 +142,12 @@
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.input-phone-lable {
+.input-label {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 500;
@@ -229,23 +175,6 @@
 .promo-img {
   width: 100%;
   height: 200px;
-}
-
-@media (max-width: 800px) {
-  .promo-img {
-    display: none;
-  }
-}
-
-@media (min-width: 800px) {
-  .promo-container {
-    margin-top: 50px;
-    max-width: 1350px;
-  }
-
-  .promo-box {
-    flex: 0 0 550px;
-  }
 }
 
 /*----SERVICE----*/
@@ -285,34 +214,6 @@
   flex: 0 0 10%;
 }
 
-@media (min-width: 520px) {
-  .service-list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .service-item {
-    flex-basis: 50%;
-  }
-}
-
-@media (min-width: 767px) {
-  .service-container {
-    max-width: 1350px;
-    text-align: center;
-  }
-
-  .service-item {
-    flex-basis: 23%;
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .service-name {
-    font-size: 20px;
-  }
-}
-
 /*----CALCULATOR----*/
 
 .calculator {
@@ -333,12 +234,11 @@
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
-  cursor: pointer;
+
   display: flex;
   justify-content: space-between;
   text-align: left;
 }
-
 
 .calc-choice {
   align-items: center;
@@ -449,7 +349,6 @@
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -463,57 +362,6 @@
   align-items: flex-start;
 }
 
-@media (max-width: 800px) {
-  .calculator-contacts,
-  .calc-options {
-    margin: auto;
-    margin-bottom: 15px;
-  }
-
-  .adress-input {
-    max-width: 90%;
-    margin: auto;
-    margin-bottom: 15px;
-  }
-
-  .calc-choice-loader,
-  .calc-choice-rent,
-  .calc-choice-time,
-  .calc-choice-date,
-  .calc-input-description {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 15px;
-  }
-}
-
-@media (min-width: 800px) {
-  .calculator {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 850px;
-    justify-content: space-between;
-  }
-
-  .calculator-contacts,
-  .calc-options {
-    flex-basis: 48%;
-    margin-bottom: 15px;
-  }
-
-  .options-list {
-    margin-right: 15px;
-  }
-
-  .adress-input {
-    flex-basis: 100%;
-    margin-bottom: 15px;
-  }
-
-  .calc-choice-loader,
-  .calc-choice-rent,
-  .calc-choice-time,
-  .calc-choice-date {
-    flex-basis: 48%;
-  }
+select {
+  cursor: pointer;
 }

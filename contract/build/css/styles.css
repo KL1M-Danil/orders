@@ -434,6 +434,8 @@ ul {
   padding-left: 0;
 }
 
+/*----HEADER----*/
+
 .header {
   color: #000000;
   font-family: GothamPro, sans-serif;
@@ -564,13 +566,12 @@ ul {
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.input-phone-lable {
+.input-label {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 500;
@@ -657,7 +658,6 @@ ul {
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -772,7 +772,6 @@ ul {
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -786,7 +785,13 @@ ul {
   align-items: flex-start;
 }
 
+select {
+  cursor: pointer;
+}
+
 @media (min-width: 520px) {
+  /*----SERVICE----*/
+
   .service-list {
     display: flex;
     flex-wrap: wrap;
@@ -798,6 +803,8 @@ ul {
 }
 
 @media (min-width: 767px) {
+  /*----SERVICE----*/
+
   .service-container {
     max-width: 1350px;
     text-align: center;
@@ -815,6 +822,8 @@ ul {
 }
 
 @media (min-width: 800px) {
+  /*----HEADER----*/
+
   .header {
     height: 100px;
     padding: 0;
@@ -857,6 +866,8 @@ ul {
     display: none;
   }
 
+  /*-----PROMO-----*/
+
   .promo-container {
     margin-top: 50px;
     max-width: 1350px;
@@ -865,6 +876,8 @@ ul {
   .promo-box {
     flex: 0 0 550px;
   }
+
+  /*----CALCULATOR----*/
 
   .calculator {
     display: flex;
@@ -897,6 +910,8 @@ ul {
 }
 
 @media (max-width: 800px) {
+  /*----HEADER----*/
+
   .header {
     position: fixed;
   }
@@ -905,9 +920,13 @@ ul {
     width: 100%;
   }
 
+  /*-----PROMO-----*/
+
   .promo-img {
     display: none;
   }
+
+  /*----CALCULATOR----*/
 
   .calculator-contacts,
   .calc-options {
