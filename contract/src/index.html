@@ -151,21 +151,145 @@
         </ul>
       </div>
     </div>
-    <div class="calculator">
+    <form class="calculator" action="send.php" method="post">
       <div class="calculator-contacts">
         <div class="calc-input">
           <span class="input-phone-lable">Мобильный телефон</span>
-          <input type="phone" class="input-phone-number" placeholder="+380" />
+          <input type="phone" class="input-phone-number" placeholder="+380" required />
         </div>
-        <div>
+        <div class="calc-choice">
+          <div class="choice-text">
             <span class="input-phone-lable">Кузов</span>
-            <div>
-
+            <div class="choice-menu">
+              <select name="menu" size="1">
+                <option selected="selected" value="first"
+                  >Закрытый кузов (3 метра)</option
+                >
+                <option value="second">Закрытый кузов (4 метра) </option>
+                <option value="third">Закрытый кузов (5.7 метра)</option>
+              </select>
             </div>
+          </div>
+          <i class="choice-icon"></i>
         </div>
         <div></div>
       </div>
-    </div>
+      <!--
+        <div class="calc-options">
+          <ul class="options-list">
+            <li class="options-item">
+              <span class="options-title">Высота до:</span><span>1.5м</span>
+            </li>
+            <li class="options-item">
+              <span class="options-title">Длина до:</span><span>3м</span>
+            </li>
+            <li class="options-item">
+              <span class="options-title">Грузоподьемность до:</span
+              ><span>2000кг</span>
+            </li>
+            <li class="options-item">
+              <span class="options-title"></span><span></span>
+            </li>
+          </ul>
+        </div>
+      -->
+      <div class="calc-options">
+        <ul class="options-list">
+          <li class="options-item">
+            <span class="options-title">Высота до:</span>
+          </li>
+          <li class="options-item">
+            <span class="options-title">Длина до:</span>
+          </li>
+          <li class="options-item">
+            <span class="options-title">Грузоподьемность до:</span>
+          </li>
+        </ul>
+        <div class="options-box">
+          <span>2м</span> <span><b>3м</b></span> <span>2т</span>
+        </div>
+        <div class="options-box">
+          <span>2м</span> <span><b>4м</b></span> <span>2т</span>
+        </div>
+        <div class="options-box">
+          <span>2м</span> <span><b>5.7м</b></span> <span>2т</span>
+        </div>
+      </div>
+      <div class="adress-input">
+        <img src="/build/images/point.png" alt="" class="adress-icon" />
+        <div>
+          <span class="input-phone-lable">Откуда</span>
+          <input type="phone" class="input-phone-number" required/>
+        </div>
+      </div>
+      <div class="adress-input">
+        <i class="adress-icon"></i>
+        <div>
+          <span class="input-phone-lable">Куда</span>
+          <input type="text" class="input-phone-number" required/>
+        </div>
+      </div>
+
+      <div class="calc-choice-loader">
+        <div class="choice-text">
+          <span class="input-phone-lable">Услуги грузчиков</span>
+          <div class="choice-menu">
+            <select name="menu" size="1">
+              <option selected="selected" value="first">Без грузчиков</option>
+              <option value="second">1 Грузчик</option>
+              <option value="third">2 Грузчик</option>
+            </select>
+          </div>
+        </div>
+        <i class="choice-icon"></i>
+      </div>
+
+      <div class="calc-choice-rent">
+        <div class="choice-text">
+          <span class="input-phone-lable">Срок аренды</span>
+          <div class="choice-menu">
+            <select name="menu" size="1">
+              <option value="first">1 час</option>
+              <option value="second">1,5 час</option>
+              <option value="third">2 час</option>
+              <option value="third">2,5 час</option>
+              <option value="third">3 час</option>
+              <option value="third">3,5 час</option>
+              <option value="third">4 час</option>
+              <option value="third">4,5 час</option>
+            </select>
+          </div>
+        </div>
+        <i class="choice-icon"></i>
+      </div>
+
+      <div class="calc-choice-time">
+        <div class="choice-text">
+          <span class="input-phone-lable">Время подачи</span>
+          <div class="choice-menu">
+            <select name="menu" size="1">
+              <option selected="selected" value="first">Ближайшее время</option>
+              <option value="second">Через 30 мин</option>
+              <option value="third">Через 1 час</option>
+              <option value="third">Через 2 час</option>
+              <option value="third">Другое</option>
+            </select>
+          </div>
+        </div>
+        <i class="choice-icon"></i>
+      </div>
+
+      <div class="calc-choice-date">
+        <span class="input-phone-lable">Дата</span>
+        <input type="date" name="calendar" />
+      </div>
+
+      <div class="calc-input-description">
+          <span class="input-phone-lable">Опишите кратко груз</span>
+          <input type="text" class="input-phone-number" placeholder="Объем, масса, характер груза" />
+        </div>
+
+    </form>
 
     <script src="js/scripts.min.js"></script>
   </body>
