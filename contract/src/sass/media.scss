@@ -149,9 +149,16 @@
     flex-basis: 23%;
     flex-direction: column;
     margin: 0;
+    align-items: center;
   }
 
   .service-name {
     font-size: 20px;
+  }
+
+  .service-icon {
+    margin-bottom: 20px;
+    max-width: 80px;
+    max-height: 80px;
   }
 }

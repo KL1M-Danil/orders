@@ -516,6 +516,7 @@ ul {
   display: flex;
   margin: auto;
   margin-top: 70px;
+  margin-bottom: 85px;
 }
 
 .promo-box {
@@ -596,9 +597,8 @@ ul {
   width: 100%;
 }
 
-.promo-img {
-  width: 100%;
-  height: 200px;
+.promo-img img {
+  width: 600px;
 }
 
 /*----SERVICE----*/
@@ -636,6 +636,9 @@ ul {
 
 .service-icon {
   flex: 0 0 10%;
+  max-width: 45px;
+  max-height: 30px;
+  margin-right: 20px;
 }
 
 /*----CALCULATOR----*/
@@ -746,7 +749,7 @@ ul {
 
 .adress-input {
   display: flex;
-  padding: 10px 10px;
+  padding: 18px 18px 13px;
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
@@ -759,7 +762,9 @@ ul {
 }
 
 .adress-icon {
-  flex-basis: 15px;
+  width: 25px;
+  height: 35px;
+  margin-right: 15px;
 }
 
 .calc-choice-loader,
@@ -814,10 +819,17 @@ select {
     flex-basis: 23%;
     flex-direction: column;
     margin: 0;
+    align-items: center;
   }
 
   .service-name {
     font-size: 20px;
+  }
+
+  .service-icon {
+    margin-bottom: 20px;
+    max-width: 80px;
+    max-height: 80px;
   }
 }
 

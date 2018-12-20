@@ -20,6 +20,11 @@
 
     <title>RTK</title>
     <link rel="stylesheet" href="css/styles.min.css" />
+
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"
+    ></script>
   </head>
 
   <body>
@@ -27,7 +32,7 @@
     <div class="nav-container">
       <header class="header">
         <a href="#" class="logo"><img src="#" alt="LOGO"/></a>
-        <nav class="nav js-nav">
+        <nav class="nav js-nav" id="nav">
           <div class="nav-mobile">
             <a href="tel:+380678800613" class="nav-tel-mobile"
               >+38 067 880 06 13</a
@@ -36,9 +41,9 @@
           </div>
           <ul class="nav-list js-nav-list">
             <li class="nav-item">
-              <a href="" class="nav-link">наши услуги</a>
+              <a href="#service" class="nav-link">наши услуги</a>
             </li>
-            <li class="nav-item"><a href="" class="nav-link">автопарк</a></li>
+            <li class="nav-item"><a href="" class="nav-link">заказ</a></li>
             <li class="nav-item">
               <a href="" class="nav-link">наши перевозки</a>
             </li>
@@ -46,7 +51,7 @@
               <a href="tel:+380678800613" class="nav-tel">+38 067 880 06 13</a>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-btn">обратный звонок</a>
+              <a href="#callback" class="nav-btn">обратный звонок</a>
             </li>
           </ul>
         </nav>
@@ -66,7 +71,7 @@
           Мы ставим машину под загрузку уже через час после подачи заявки!
         </p>
         <div class="callback-form">
-          <div class="input-phone">
+          <div id="callback" class="input-phone">
             <span class="input-label">Мобильный телефон</span>
             <input type="phone" class="input-phone-number" placeholder="+380" />
           </div>
@@ -74,44 +79,28 @@
         </div>
       </div>
       <div class="promo-img">
-        <img src="/build/images/promo2.jpg" alt="transit car" />
+        <img src="/images/promo2-min.jpg" alt="transit car" />
       </div>
     </div>
     <!--====SERVICE====-->
-    <div class="service-container">
+    <div class="service-container" id="service">
       <div class="service-box">
         <h3 class="service-title">Услуги</h3>
         <ul class="service-list">
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
+            <img src="/images/moving-truck.svg" alt="moving-truck" class="service-icon" />
             <h4 class="service-name">Любые переезды</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
+            <img src="/images/brick.svg" alt="brick" class="service-icon" />
             <h4 class="service-name">Доставка строиматериалов и товаров</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
+            <img src="/images/dump-truck.svg" alt="dump-truck" class="service-icon" />
             <h4 class="service-name">Вывоз строительного мусора</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
+            <img src="/images/magnet.svg" alt="magnet" class="service-icon" />
             <h4 class="service-name">Вывоз металлолома</h4>
           </li>
         </ul>
@@ -120,36 +109,20 @@
         <h3 class="service-title">Дополнительные услуги</h3>
         <ul class="service-list">
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
+            <img src="/images/loader.svg" alt="loader" class="service-icon" />
             <h4 class="service-name">Заказ грузчика</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
+            <img src="/images/delivery-truck.svg" alt="delivery-truck" class="service-icon" />
             <h4 class="service-name">Заказ на определенное время</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
+            <img src="/images/tow-truck.svg" alt="tow-truck" class="service-icon" />
             <h4 class="service-name">Манипулятор</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/build/images/moving-truck.svg"
-              alt=""
-              class="service-icon"
-            />
-            <h4 class="service-name">Вывоз металлолома</h4>
+            <img src="/images/loader.svg" alt="loader" class="service-icon" />
+            <h4 class="service-name">Заказ грузчиков</h4>
           </li>
         </ul>
       </div>
@@ -224,7 +197,7 @@
       </div>
       <div class="adress-input">
         <img
-          src="/build/images/point.png"
+          src="/images/point.png"
           alt="first adress point"
           class="adress-icon"
         />
@@ -235,7 +208,7 @@
       </div>
       <div class="adress-input">
         <img
-          src="/build/images/point.png"
+          src="/images/point.png"
           alt="second adress point"
           class="adress-icon"
         />
