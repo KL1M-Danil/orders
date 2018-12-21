@@ -14,7 +14,7 @@ function onIconClick(event) {
 }
 
 //E-mail Ajax Send
-$("form.класс-формы").submit(function() {
+$("form.calculator").submit(function() {
   //Change
   var th = $(this);
   $.ajax({

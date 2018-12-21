@@ -19,9 +19,8 @@
     <meta name="format-detection" content="telephone=no" />
 
     <title>Грузоперевозки</title>
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/styles.min.css" />
-    
 
     <script
       type="text/javascript"
@@ -32,16 +31,16 @@
   <body>
     <!--====NAVIGATION====-->
     <div class="nav-container">
-      <header class="header js-header">
+      <header class="header js-header header-close">
         <a href="#" class="logo"><img src="#" alt="LOGO-RTK"/></a>
-        <nav class="nav js-nav" id="nav">
+        <nav class="nav js-nav nav-close" id="nav">
           <div class="nav-mobile">
             <a href="tel:+380678800613" class="nav-tel-mobile"
               >+38 067 880 06 13</a
             >
             <a href="#" class="nav-icon js-nav-icon">&#9776;</a>
           </div>
-          <ul class="nav-list js-nav-list">
+          <ul class="nav-list js-nav-list nav-list-close">
             <li class="nav-item">
               <a href="#service" class="nav-link">наши услуги</a>
             </li>
@@ -123,11 +122,7 @@
             <h4 class="service-name">Заказ грузчика</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/images/delivery-truck.svg"
-              alt="delivery-truck"
-              class="service-icon"
-            />
+            <img src="/images/clock.svg" alt="clock" class="service-icon" />
             <h4 class="service-name">Заказ на определенное время</h4>
           </li>
           <li class="service-item">
@@ -139,23 +134,26 @@
             <h4 class="service-name">Манипулятор</h4>
           </li>
           <li class="service-item">
-            <img src="/images/loader.svg" alt="loader" class="service-icon" />
-            <h4 class="service-name">Заказ грузчиков</h4>
+            <img
+              src="/images/delivery-truck.svg"
+              alt="delivery-truck"
+              class="service-icon"
+            />
+            <h4 class="service-name">Подача до 1 часа</h4>
           </li>
         </ul>
       </div>
     </div>
     <!--=====CALCULATOR====-->
     <!-- Hidden Required Fields -->
-    <input type="hidden" name="project_name" value="Site Name" />
+    <input type="hidden" name="project_name" value="RTK" />
     <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
-    <input type="hidden" name="form_subject" value="Form Subject" />
+    <input type="hidden" name="form_subject" value="Заявка" />
     <!-- END Hidden Required Fields -->
     <form class="calculator" action="mail.php" method="post" id="form">
-        <h3 class="calc-title">Заказ грузового такси</h3>
-        <h4 class="calc-subtitle">Узнайте тариф, указав данные о перевозке</h4>
+      <h3 class="calc-title">Заказ грузового такси</h3>
+      <h4 class="calc-subtitle">Узнайте тариф, указав данные о перевозке</h4>
       <div class="calculator-contacts">
-        
         <div class="calc-input">
           <span class="input-label">Мобильный телефон</span>
           <input
@@ -178,28 +176,9 @@
               </select>
             </div>
           </div>
-          <i class="choice-icon"></i>
         </div>
         <div></div>
       </div>
-      <!--<div class="calc-options">
-          <ul class="options-list">
-            <li class="options-item">
-              <span class="options-title">Высота до:</span><span>1.5м</span>
-            </li>
-            <li class="options-item">
-              <span class="options-title">Длина до:</span><span>3м</span>
-            </li>
-            <li class="options-item">
-              <span class="options-title">Грузоподьемность до:</span
-              ><span>2000кг</span>
-            </li>
-            <li class="options-item">
-              <span class="options-title"></span><span></span>
-            </li>
-          </ul>
-        </div>-->
-
       <div class="calc-options">
         <ul class="options-list">
           <li class="options-item">
@@ -255,7 +234,6 @@
             </select>
           </div>
         </div>
-        <i class="choice-icon"></i>
       </div>
       <div class="calc-choice-rent">
         <div class="choice-text">
@@ -273,7 +251,6 @@
             </select>
           </div>
         </div>
-        <i class="choice-icon"></i>
       </div>
       <div class="calc-choice-time">
         <div class="choice-text">
@@ -288,7 +265,6 @@
             </select>
           </div>
         </div>
-        <i class="choice-icon"></i>
       </div>
       <div class="calc-choice-date">
         <span class="input-label">Дата</span>
@@ -381,9 +357,9 @@
       </ul>
     </div>
     <footer class="footer">
-        <a href="tel:+380678800613" class="footer-tel">+38 067 880 06 13</a>
-        <a href="#callback" class="footer-btn">Перезвонить мне</a>
-        <a href="https://t.me/kl1md" class="author">2018. By KL1M</a>
+      <a href="tel:+380678800613" class="footer-tel">+38 067 880 06 13</a>
+      <a href="#callback" class="footer-btn">Перезвонить мне</a>
+      <a href="https://t.me/kl1md" class="author">2018. By KL1M</a>
     </footer>
 
     <script src="js/scripts.min.js"></script>
