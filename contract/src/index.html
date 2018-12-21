@@ -30,8 +30,8 @@
   <body>
     <!--====NAVIGATION====-->
     <div class="nav-container">
-      <header class="header">
-        <a href="#" class="logo"><img src="#" alt="LOGO"/></a>
+      <header class="header js-header">
+        <a href="#" class="logo"><img src="#" alt="LOGO-RTK"/></a>
         <nav class="nav js-nav" id="nav">
           <div class="nav-mobile">
             <a href="tel:+380678800613" class="nav-tel-mobile"
@@ -43,9 +43,9 @@
             <li class="nav-item">
               <a href="#service" class="nav-link">наши услуги</a>
             </li>
-            <li class="nav-item"><a href="" class="nav-link">заказ</a></li>
+            <li class="nav-item"><a href="#form" class="nav-link">заказ</a></li>
             <li class="nav-item">
-              <a href="" class="nav-link">наши перевозки</a>
+              <a href="#loyalty" class="nav-link">лояльность</a>
             </li>
             <li class="nav-item">
               <a href="tel:+380678800613" class="nav-tel">+38 067 880 06 13</a>
@@ -75,7 +75,7 @@
             <span class="input-label">Мобильный телефон</span>
             <input type="phone" class="input-phone-number" placeholder="+380" />
           </div>
-          <button class="callback-btn">Расчитать стоимость перевозки</button>
+          <button class="callback-btn">Заказать грузоперевозку</button>
         </div>
       </div>
       <div class="promo-img">
@@ -88,7 +88,11 @@
         <h3 class="service-title">Услуги</h3>
         <ul class="service-list">
           <li class="service-item">
-            <img src="/images/moving-truck.svg" alt="moving-truck" class="service-icon" />
+            <img
+              src="/images/moving-truck.svg"
+              alt="moving-truck"
+              class="service-icon"
+            />
             <h4 class="service-name">Любые переезды</h4>
           </li>
           <li class="service-item">
@@ -96,7 +100,11 @@
             <h4 class="service-name">Доставка строиматериалов и товаров</h4>
           </li>
           <li class="service-item">
-            <img src="/images/dump-truck.svg" alt="dump-truck" class="service-icon" />
+            <img
+              src="/images/dump-truck.svg"
+              alt="dump-truck"
+              class="service-icon"
+            />
             <h4 class="service-name">Вывоз строительного мусора</h4>
           </li>
           <li class="service-item">
@@ -113,11 +121,19 @@
             <h4 class="service-name">Заказ грузчика</h4>
           </li>
           <li class="service-item">
-            <img src="/images/delivery-truck.svg" alt="delivery-truck" class="service-icon" />
+            <img
+              src="/images/delivery-truck.svg"
+              alt="delivery-truck"
+              class="service-icon"
+            />
             <h4 class="service-name">Заказ на определенное время</h4>
           </li>
           <li class="service-item">
-            <img src="/images/tow-truck.svg" alt="tow-truck" class="service-icon" />
+            <img
+              src="/images/tow-truck.svg"
+              alt="tow-truck"
+              class="service-icon"
+            />
             <h4 class="service-name">Манипулятор</h4>
           </li>
           <li class="service-item">
@@ -128,8 +144,16 @@
       </div>
     </div>
     <!--=====CALCULATOR====-->
-    <form class="calculator" action="send.php" method="post">
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="Site Name" />
+    <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
+    <input type="hidden" name="form_subject" value="Form Subject" />
+    <!-- END Hidden Required Fields -->
+    <form class="calculator" action="mail.php" method="post" id="form">
+        <h3 class="calc-title">Заказ грузового такси</h3>
+        <h4 class="calc-subtitle">Узнайте тариф, указав данные о перевозке</h4>
       <div class="calculator-contacts">
+        
         <div class="calc-input">
           <span class="input-label">Мобильный телефон</span>
           <input
@@ -173,6 +197,7 @@
             </li>
           </ul>
         </div>-->
+
       <div class="calc-options">
         <ul class="options-list">
           <li class="options-item">
@@ -275,7 +300,89 @@
           placeholder="Объем, масса, характер груза"
         />
       </div>
+      <button class="form-btn">Отправить заявку</button>
     </form>
+
+    <!--=====STEPS====-->
+
+    <div class="steps-wrapper">
+      <h3 class="steps-title">Как это работает?</h3>
+      <ul class="steps-list">
+        <li class="steps-item">
+          <span class="steps-number">1</span
+          ><span class="steps-name"
+            >Вы оставляете свое Имя и Телефон на этой странице</span
+          >
+        </li>
+        <li class="steps-item">
+          <span class="steps-number">2</span
+          ><span class="steps-name"
+            >С Вами связывается наш специалист и помогает рассчитать
+            стоимость</span
+          >
+        </li>
+        <li class="steps-item">
+          <span class="steps-number">3</span
+          ><span class="steps-name"
+            >Осуществляем перевозку и после Вы оплачиваете оговоренную
+            сумму</span
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!--=====LOYALTY====-->
+
+    <div class="loyalty-wrapper" id="loyalty">
+      <h3 class="loyalty-title">Заботимся о ваших грузах</h3>
+      <ul class="loyalty-list">
+        <li class="loyalty-item">
+          <h4 class="loyalty-name">Легко заказать</h4>
+          <p class="loyalty-text">
+            Закажите грузовую машину звонком в круглосуточный Контактный центр
+            или оформите заказ на сайте.
+          </p>
+        </li>
+        <li class="loyalty-item">
+          <h4 class="loyalty-name">Автопоиск машины в считанные минуты</h4>
+          <p class="loyalty-text">
+            Если автомобиль нужен срочно — мы не подведём.
+          </p>
+        </li>
+        <li class="loyalty-item">
+          <h4 class="loyalty-name">Бережем ваши нервы</h4>
+          <p class="loyalty-text">
+            Вы можете в любой момент связаться с водителем, то есть
+            контролировать перевозку в реальном времени.
+          </p>
+        </li>
+        <li class="loyalty-item">
+          <h4 class="loyalty-name">Контроль качества</h4>
+          <p class="loyalty-text">
+            Следим за каждым этапом перевозки: от звонка в Контактный центр — до
+            вручения заказчику.
+          </p>
+        </li>
+        <li class="loyalty-item">
+          <h4 class="loyalty-name">Экономия, которую легко посчитать</h4>
+          <p class="loyalty-text">
+            Доверьтесь нам: мы всё промониторили за вас. Больше не нужно искать
+            самые доступные цены. Заказывайте у нас!
+          </p>
+        </li>
+        <li class="loyalty-item">
+          <h4 class="loyalty-name">Служба поддержки клиентов</h4>
+          <p class="loyalty-text">
+            На ваш звонок ответят живые люди и помогут в любой ситуации.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <footer class="footer">
+        <a href="tel:+380678800613" class="footer-tel">+38 067 880 06 13</a>
+        <a href="#callback" class="footer-btn">Перезвонить мне</a>
+        <a href="https://t.me/kl1md" class="author">2018. By KL1M</a>
+    </footer>
 
     <script src="js/scripts.min.js"></script>
   </body>

@@ -2,6 +2,11 @@
   /*----HEADER----*/
   .header {
     position: fixed;
+    box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);
+  }
+
+  .header-close {
+    box-shadow: none;
   }
 
   .nav {
@@ -20,6 +25,10 @@
   .calc-options {
     margin: auto;
     margin-bottom: 15px;
+  }
+
+  .calc-subtitle {
+    display: none;
   }
 
   .adress-input {
@@ -69,14 +78,21 @@
 
   .nav-link {
     color: $main-font-color;
+    line-height: 36px;
   }
 
   .nav-tel {
     color: $main-font-color;
+    line-height: 36px;
   }
 
   .nav-tel-mobile {
     display: none;
+  }
+
+  .nav-btn {
+    line-height: 36px;
+    padding: 0px 15px;
   }
 
   .nav-icon {
@@ -103,10 +119,20 @@
     justify-content: space-between;
   }
 
+  .calc-title,
+  .calc-subtitle {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
   .calculator-contacts,
   .calc-options {
     flex-basis: 48%;
     margin-bottom: 15px;
+  }
+
+  .calc-options {
+    align-items: center;
   }
 
   .options-list {
@@ -123,6 +149,67 @@
   .calc-choice-time,
   .calc-choice-date {
     flex-basis: 48%;
+  }
+
+  .form-btn {
+    width: 40%;
+    margin: auto;
+  }
+
+  /*----STEPS----*/
+
+  .steps-wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .steps-title {
+    margin-bottom: 45px;
+  }
+
+  .steps-list {
+    display: flex;
+    max-width: 1050px;
+  }
+
+  .steps-item {
+    margin-right: 40px;
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 33%;
+  }
+
+  .steps-number {
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 40px;
+    margin-right: 0;
+    line-height: 60px;
+  }
+
+  /*----LOYALTY----*/
+
+  .loyalty-wrapper {
+    max-width: 850px;
+  }
+
+  .loyalty-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .loyalty-item {
+    flex-basis: 46%;
+  }
+
+  /*----FOOTER----*/
+
+  .footer {
+    max-width: 850px;
   }
 }
 
@@ -160,5 +247,36 @@
     margin-bottom: 20px;
     max-width: 80px;
     max-height: 80px;
+  }
+}
+
+@media (min-width: 1100px) {
+  /*----LOYALTY----*/
+
+  .loyalty-wrapper {
+    max-width: 1320px;
+  }
+
+  .loyalty-title {
+    margin-top: 120px;
+  }
+
+  .loyalty-item {
+    flex-basis: 25%;
+    margin-right: 70px;
+  }
+
+  .loyalty-name {
+    font-size: 20px;
+  }
+
+  .loyalty-text {
+    font-size: 16px;
+  }
+
+  /*----FOOTER----*/
+
+  .footer {
+    max-width: 1320px;
   }
 }

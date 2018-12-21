@@ -3,12 +3,14 @@
 var list = document.querySelector(".js-nav-list");
 var icon = document.querySelector(".js-nav-icon");
 var nav = document.querySelector(".js-nav");
+var header = document.querySelector(".js-header");
 icon.addEventListener("click", onIconClick);
 
 function onIconClick(event) {
   event.preventDefault();
   list.classList.toggle("nav-list-close");
   nav.classList.toggle("nav-close");
+  header.classList.toggle("header-close");
 } //E-mail Ajax Send
 
 

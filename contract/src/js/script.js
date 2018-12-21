@@ -1,6 +1,7 @@
 const list = document.querySelector(".js-nav-list");
 const icon = document.querySelector(".js-nav-icon");
 const nav = document.querySelector(".js-nav");
+const header= document.querySelector(".js-header");
 
 icon.addEventListener("click", onIconClick);
 
@@ -9,6 +10,7 @@ function onIconClick(event) {
 
   list.classList.toggle("nav-list-close");
   nav.classList.toggle("nav-close");
+  header.classList.toggle("header-close");
 }
 
 //E-mail Ajax Send
