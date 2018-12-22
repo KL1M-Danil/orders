@@ -7,10 +7,15 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="theme-color" content="#000000" />
-    <meta name="copyright" content="Author" />
+    <meta name="author" content="Klimenko Danil" />
+    <meta name="copyright" content="(c)" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
-    <meta name="apple-mobile-web-app-title" content="Application Name" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Грузоперевозки" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
     <meta
       name="msapplication-TileImage"
       content="images/favicons/144x144.png"
@@ -30,9 +35,14 @@
 
   <body>
     <!--====NAVIGATION====-->
+    <!-- Hidden Required Fields -->
+    <input type="hidden" name="project_name" value="RTK" />
+    <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
+    <input type="hidden" name="form_subject" value="Заявка" />
+    <!-- END Hidden Required Fields -->
     <div class="nav-container">
       <header class="header js-header header-close">
-        <a href="#" class="logo"><img src="#" alt="LOGO-RTK"/></a>
+        <a href="#" class="logo"><img src="#" alt="logo-rtk"/></a>
         <nav class="nav js-nav nav-close" id="nav">
           <div class="nav-mobile">
             <a href="tel:+380678800613" class="nav-tel-mobile"
@@ -60,10 +70,10 @@
     </div>
     <!--====PROMO====-->
     <div class="promo-container">
-      <div class="promo-box">
+      <div class="promo-box" id="promo-box">
         <h1 class="promo-title">
           Организуем комфортный переезд или быструю доставку груза
-          <b>без посредников и переплат</b>
+          <b>без посредников и переплаты</b>
         </h1>
         <h3 class="promo-subtitle">
           Грузоперевозки любой сложности до 5 тонн по Днепру и области
@@ -71,13 +81,31 @@
         <p class="promo-text">
           Мы ставим машину под загрузку уже через час после подачи заявки!
         </p>
-        <div class="callback-form">
-          <div id="callback" class="input-phone">
+        <form class="callback-form" id="callback">
+          <!-- Hidden Required Fields -->
+          <input
+            type="hidden"
+            name="project_name"
+            value="RTK - Региональная Транспортная Компания"
+          />
+          <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
+          <input
+            type="hidden"
+            name="form_subject"
+            value="Заявка c верхней формы"
+          />
+          <!-- END Hidden Required Fields -->
+          <div class="input-phone js-callback">
             <span class="input-label">Мобильный телефон</span>
-            <input type="phone" class="input-phone-number" placeholder="+380" />
+            <input
+              type="text"
+              name="Телефон"
+              class="input-phone-number"
+              placeholder="+380"
+            />
           </div>
           <button class="callback-btn">Заказать грузоперевозку</button>
-        </div>
+        </form>
       </div>
       <div class="promo-img">
         <img src="/images/promo2-min.jpg" alt="transit car" />
@@ -89,27 +117,33 @@
         <h3 class="service-title">Услуги</h3>
         <ul class="service-list">
           <li class="service-item">
-            <img
-              src="/images/moving-truck.svg"
-              alt="moving-truck"
-              class="service-icon"
-            />
+            <a href="#promo-box" class="js-service-icon"
+              ><img
+                src="/images/moving-truck.svg"
+                alt="moving-truck"
+                class="service-icon"
+            /></a>
             <h4 class="service-name">Любые переезды</h4>
           </li>
           <li class="service-item">
-            <img src="/images/brick.svg" alt="brick" class="service-icon" />
+            <a href="#promo-box" class="js-service-icon"
+              ><img src="/images/brick.svg" alt="brick" class="service-icon"
+            /></a>
             <h4 class="service-name">Доставка строиматериалов и товаров</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/images/dump-truck.svg"
-              alt="dump-truck"
-              class="service-icon"
-            />
+            <a href="#promo-box" class="js-service-icon"
+              ><img
+                src="/images/dump-truck.svg"
+                alt="dump-truck"
+                class="service-icon"
+            /></a>
             <h4 class="service-name">Вывоз строительного мусора</h4>
           </li>
           <li class="service-item">
-            <img src="/images/magnet.svg" alt="magnet" class="service-icon" />
+            <a href="#promo-box"
+              ><img src="/images/magnet.svg" alt="magnet" class="service-icon"
+            /></a>
             <h4 class="service-name">Вывоз металлолома</h4>
           </li>
         </ul>
@@ -118,39 +152,50 @@
         <h3 class="service-title">Дополнительные услуги</h3>
         <ul class="service-list">
           <li class="service-item">
-            <img src="/images/loader.svg" alt="loader" class="service-icon" />
+            <a href="#promo-box"
+              ><img src="/images/loader.svg" alt="loader" class="service-icon"
+            /></a>
             <h4 class="service-name">Заказ грузчика</h4>
           </li>
           <li class="service-item">
-            <img src="/images/clock.svg" alt="clock" class="service-icon" />
+            <a href="#promo-box"
+              ><img src="/images/clock.svg" alt="clock" class="service-icon"
+            /></a>
             <h4 class="service-name">Заказ на определенное время</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/images/tow-truck.svg"
-              alt="tow-truck"
-              class="service-icon"
-            />
+            <a href="#promo-box"
+              ><img
+                src="/images/tow-truck.svg"
+                alt="tow-truck"
+                class="service-icon"
+            /></a>
             <h4 class="service-name">Манипулятор</h4>
           </li>
           <li class="service-item">
-            <img
-              src="/images/delivery-truck.svg"
-              alt="delivery-truck"
-              class="service-icon"
-            />
+            <a href="#promo-box">
+              <img
+                src="/images/delivery-truck.svg"
+                alt="delivery-truck"
+                class="service-icon"
+            /></a>
             <h4 class="service-name">Подача до 1 часа</h4>
           </li>
         </ul>
       </div>
     </div>
     <!--=====CALCULATOR====-->
-    <!-- Hidden Required Fields -->
-    <input type="hidden" name="project_name" value="RTK" />
-    <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
-    <input type="hidden" name="form_subject" value="Заявка" />
-    <!-- END Hidden Required Fields -->
+
     <form class="calculator" action="mail.php" method="post" id="form">
+      <!-- Hidden Required Fields -->
+      <input
+        type="hidden"
+        name="project_name"
+        value="RTK - Региональная Транспортная Компания"
+      />
+      <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
+      <input type="hidden" name="form_subject" value="Заявка c нижней формы" />
+      <!-- END Hidden Required Fields -->
       <h3 class="calc-title">Заказ грузового такси</h3>
       <h4 class="calc-subtitle">Узнайте тариф, указав данные о перевозке</h4>
       <div class="calculator-contacts">
@@ -158,6 +203,7 @@
           <span class="input-label">Мобильный телефон</span>
           <input
             type="phone"
+            name="Телефон"
             class="input-phone-number"
             placeholder="+380"
             required
@@ -167,12 +213,17 @@
           <div class="choice-text">
             <span class="input-label">Кузов</span>
             <div class="choice-menu">
-              <select name="choice-size" size="1">
-                <option selected="selected" value="first"
-                  >Закрытый кузов (3 метра)</option
+              <select name="Кузов" size="1">
+                <option selected="selected" value="Открытый кузов (3 метра)"
+                  >Открытый кузов (3 метра)</option
                 >
-                <option value="second">Закрытый кузов (4 метра)</option>
-                <option value="third">Закрытый кузов (5.7 метра)</option>
+                <option value="Открытый кузов (4 метра)"
+                  >Открытый кузов (4 метра)</option
+                >
+                <option value="Открытый кузов (5.7 метра)"
+                  >Открытый кузов (5.7 метра)</option
+                >
+                <option value="Тент (до 3 метров)">Тент (до 3 метров)</option>
               </select>
             </div>
           </div>
@@ -209,7 +260,12 @@
         />
         <div>
           <span class="input-label">Откуда</span>
-          <input type="phone" class="input-phone-number" required />
+          <input
+            type="text"
+            class="input-phone-number"
+            name="Откуда"
+            required
+          />
         </div>
       </div>
       <div class="adress-input">
@@ -220,17 +276,19 @@
         />
         <div>
           <span class="input-label">Куда</span>
-          <input type="text" class="input-phone-number" required />
+          <input type="text" class="input-phone-number" name="Куда" required />
         </div>
       </div>
       <div class="calc-choice-loader">
         <div class="choice-text">
           <span class="input-label">Услуги грузчиков</span>
           <div class="choice-menu">
-            <select name="choice-loader" size="1">
-              <option selected="selected" value="first">Без грузчиков</option>
-              <option value="second">1 Грузчик</option>
-              <option value="third">2 Грузчик</option>
+            <select name="Услуги грузчиков" size="1">
+              <option selected="selected" value="Без грузчиков"
+                >Без грузчиков</option
+              >
+              <option value="1 Грузчик">1 Грузчик</option>
+              <option value="2 Грузчик">2 Грузчик</option>
             </select>
           </div>
         </div>
@@ -238,16 +296,16 @@
       <div class="calc-choice-rent">
         <div class="choice-text">
           <span class="input-label">Срок аренды</span>
-          <div class="choice-menu">
-            <select name="choice-rent" size="1">
-              <option value="first">1 час</option>
-              <option value="second">1,5 час</option>
-              <option value="third">2 час</option>
-              <option value="third">2,5 час</option>
-              <option value="third">3 час</option>
-              <option value="third">3,5 час</option>
-              <option value="third">4 час</option>
-              <option value="third">4,5 час</option>
+          <div class="Срок аренды">
+            <select name="Срок аренды" size="1">
+              <option value="1ч">1 час</option>
+              <option value="1,5ч">1,5 час</option>
+              <option value="2ч">2 час</option>
+              <option value="2,5ч">2,5 час</option>
+              <option value="3ч">3 час</option>
+              <option value="3,5ч">3,5 час</option>
+              <option value="4ч">4 час</option>
+              <option value="4,5ч">4,5 час</option>
             </select>
           </div>
         </div>
@@ -256,24 +314,24 @@
         <div class="choice-text">
           <span class="input-label">Время подачи</span>
           <div class="choice-menu">
-            <select name="choice-time" size="1">
+            <select name="Время подачи" size="1">
               <option selected="selected" value="first">Ближайшее время</option>
-              <option value="second">Через 30 мин</option>
-              <option value="third">Через 1 час</option>
-              <option value="third">Через 2 час</option>
-              <option value="third">Другое</option>
+              <option value="Через 30 мин">Через 30 мин</option>
+              <option value="Через 1 час">Через 1 час</option>
+              <option value="Через 2 час">Через 2 час</option>
+              <option value="Другое">Другое</option>
             </select>
           </div>
         </div>
       </div>
       <div class="calc-choice-date">
-        <span class="input-label">Дата</span>
-        <input type="date" name="choice-data" />
+        <span class="input-label">Дата</span> <input type="date" name="Дата" />
       </div>
       <div class="calc-input-description">
         <span class="input-label">Опишите кратко груз</span>
         <input
           type="text"
+          name="Описание груза"
           class="input-phone-number"
           placeholder="Объем, масса, характер груза"
         />
@@ -359,7 +417,9 @@
     <footer class="footer">
       <a href="tel:+380678800613" class="footer-tel">+38 067 880 06 13</a>
       <a href="#callback" class="footer-btn">Перезвонить мне</a>
-      <a href="https://t.me/kl1md" class="author">2018. By KL1M</a>
+      <a href="https://t.me/kl1md" class="author" target="_blank"
+        >2018. By KL1M</a
+      >
     </footer>
 
     <script src="js/scripts.min.js"></script>

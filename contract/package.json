@@ -43,5 +43,8 @@
     "gulp-uglify": "^3.0.1",
     "run-sequence": "^2.2.1",
     "stylelint": "^9.6.0"
+  },
+  "dependencies": {
+    "inputmask": "^4.0.5"
   }
 }

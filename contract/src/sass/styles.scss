@@ -11,7 +11,7 @@
   font-family: $main-font-family;
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background: rgba(255,255,255,0.9);
   text-transform: uppercase;
   width: 100%;
   padding-bottom: 20px;
@@ -21,6 +21,10 @@
 
 .logo {
   margin-left: 20px;
+}
+
+.logo-rtk {
+  max-height: 20px;
 }
 
 .nav-container {
@@ -35,6 +39,7 @@
 
 .nav-icon {
   font-size: 1.375rem;
+  color: $main-btn-color;
 }
 
 .nav-list {
@@ -51,6 +56,7 @@
 .nav-link {
   color: $main-font-color;
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .nav-tel,
@@ -59,6 +65,7 @@
   font-weight: 700;
   font-size: 15px;
   margin-right: 20px;
+  text-decoration: underline;
 }
 
 .nav-btn {
@@ -85,7 +92,7 @@
   text-align: center;
   display: flex;
   margin: auto;
-  margin-top: 110px;
+  margin-top: 80px;
   margin-bottom: 85px;
 }
 
@@ -141,6 +148,17 @@
   display: flex;
   flex-direction: column;
   text-align: left;
+  animation: radial-pulse 1s infinite;
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(240, 121, 121, 0.85);
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
 }
 
 .input-label {
@@ -154,6 +172,7 @@
   border: none;
   width: 100%;
 }
+
 
 .callback-btn {
   background-color: #ee3b23;
@@ -202,6 +221,7 @@
 .service-item {
   display: flex;
   margin-bottom: 15px;
+  align-items: center;
 }
 
 .service-name {
@@ -486,7 +506,7 @@ select {
   display: flex;
   flex-direction: column;
   text-align: center;
-   padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .footer-tel {
@@ -501,7 +521,7 @@ select {
 }
 
 .footer-btn {
-  max-width: 50%;
+  max-width: 60%;
   font-size: 18px;
   background-color: #ee3b23;
   box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);

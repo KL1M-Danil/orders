@@ -1,3 +1,5 @@
+var Inputmask = require('inputmask');
+
 const list = document.querySelector(".js-nav-list");
 const icon = document.querySelector(".js-nav-icon");
 const nav = document.querySelector(".js-nav");
@@ -12,6 +14,40 @@ function onIconClick(event) {
   nav.classList.toggle("nav-close");
   header.classList.toggle("header-close");
 }
+
+//Маска для тел
+var element = document.getElementById('phone');
+var maskOptions = {
+    mask: '+7(000)000-00-00',
+    lazy: false
+} 
+var mask = new IMask(element, maskOptions);
+
+//E-mail Ajax Send
+$("form.callback-form").submit(function() {
+  //Change
+  var th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "/mail.php", //Change
+    data: th.serialize()
+  }).done(function() {
+    $(th)
+      .find(".success - класс уведомление об отправке")
+      .addClass("active")
+      .css("display", "flex")
+      .hide()
+      .fadeIn();
+    setTimeout(function() {
+      $(th)
+        .find(".success")
+        .removeClass("active")
+        .fadeOut();
+      th.trigger("reset");
+    }, 1000);
+  });
+  return false;
+});
 
 //E-mail Ajax Send
 $("form.calculator").submit(function() {
@@ -38,7 +74,6 @@ $("form.calculator").submit(function() {
   });
   return false;
 });
-
 
 //Плавность якорей
 

@@ -437,7 +437,7 @@ ul {
   font-family: GothamPro, sans-serif;
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   text-transform: uppercase;
   width: 100%;
   padding-bottom: 20px;
@@ -447,6 +447,10 @@ ul {
 
 .logo {
   margin-left: 20px;
+}
+
+.logo-rtk {
+  max-height: 20px;
 }
 
 .nav-container {
@@ -461,6 +465,7 @@ ul {
 
 .nav-icon {
   font-size: 1.375rem;
+  color: #ee3b23;
 }
 
 .nav-list {
@@ -477,6 +482,7 @@ ul {
 .nav-link {
   color: #000000;
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .nav-tel,
@@ -485,6 +491,7 @@ ul {
   font-weight: 700;
   font-size: 15px;
   margin-right: 20px;
+  text-decoration: underline;
 }
 
 .nav-btn {
@@ -511,7 +518,7 @@ ul {
   text-align: center;
   display: flex;
   margin: auto;
-  margin-top: 110px;
+  margin-top: 80px;
   margin-bottom: 85px;
 }
 
@@ -566,6 +573,28 @@ ul {
   display: flex;
   flex-direction: column;
   text-align: left;
+  -webkit-animation: radial-pulse 1s infinite;
+  animation: radial-pulse 1s infinite;
+}
+
+@-webkit-keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(240, 121, 121, 0.85);
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(240, 121, 121, 0.85);
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+  }
 }
 
 .input-label {
@@ -627,6 +656,7 @@ ul {
 .service-item {
   display: flex;
   margin-bottom: 15px;
+  align-items: center;
 }
 
 .service-name {
@@ -925,7 +955,7 @@ select {
 }
 
 .footer-btn {
-  max-width: 50%;
+  max-width: 60%;
   font-size: 18px;
   background-color: #ee3b23;
   box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);
@@ -1188,14 +1218,16 @@ select {
   /*----HEADER----*/
 
   .header {
-    position: absolute;
+    position: fixed;
     box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);
-    -webkit-transform: translate(0, -105px);
-    transform: translate(0, -105px);
+    border-top: none;
+    top: -5px;
+    padding-bottom: 15px;
+    padding-top: 20px;
   }
 
   .header-close {
-    box-shadow: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.02);
   }
 
   .nav {
@@ -1218,6 +1250,17 @@ select {
 
   .promo-img {
     display: none;
+  }
+
+  .promo-box {
+    padding-top: 80px;
+    margin-top: -80px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+  }
+
+  .promo-title {
+    text-align: justify;
   }
 
   /*----CALCULATOR----*/

@@ -1,13 +1,17 @@
 @media (max-width: 800px) {
   /*----HEADER----*/
   .header {
-    position: absolute;
+    position: fixed;
     box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);
-    transform: translate(0,-105px);
+    border-top: none;
+    top: -5px;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    
   }
 
   .header-close {
-    box-shadow: none;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.05), 0 5px 5px rgba(0,0,0,0.02);
   }
 
   .nav {
@@ -19,20 +23,31 @@
   }
 
   .nav-link {
-    margin-right: 20px; 
+    margin-right: 20px;
   }
 
   .nav-btn {
     margin-right: 5px;
   }
 
- 
-
   /*-----PROMO-----*/
 
   .promo-img {
     display: none;
   }
+  
+  .promo-box {
+    padding-top: 80px;
+    margin-top: -80px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+  }
+
+  .promo-title {
+    text-align: justify;
+  }
+
+  
 
   /*----CALCULATOR----*/
 
