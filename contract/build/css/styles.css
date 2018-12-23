@@ -437,7 +437,7 @@ ul {
   font-family: GothamPro, sans-serif;
   display: flex;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   text-transform: uppercase;
   width: 100%;
   padding-bottom: 20px;
@@ -447,10 +447,7 @@ ul {
 
 .logo {
   margin-left: 20px;
-}
-
-.logo-rtk {
-  max-height: 20px;
+  flex-basis: 10%;
 }
 
 .nav-container {
@@ -461,6 +458,15 @@ ul {
 .nav-mobile {
   text-align: right;
   margin-right: 20px;
+}
+
+.nav-tel-mobile {
+  flex-basis: 70%;
+  text-align: right;
+}
+
+.nav-tel-close {
+  display: none;
 }
 
 .nav-icon {
@@ -517,6 +523,7 @@ ul {
   font-family: GothamPro, sans-serif;
   text-align: center;
   display: flex;
+  align-items: center;
   margin: auto;
   margin-top: 80px;
   margin-bottom: 85px;
@@ -527,6 +534,21 @@ ul {
   max-width: 480px;
   margin-bottom: 50px;
 }
+
+/*
+.promo-box:before {
+  content: "";
+  background: url(/images/dnipro.jpg) 0 0 no-repeat;
+  background-position: top;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  transform: translate(0, 55px);
+}*/
 
 .promo-title {
   margin: 0;
@@ -542,9 +564,16 @@ ul {
 .promo-subtitle {
   margin: auto;
   margin-bottom: 15px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   width: 80%;
+  color: #ee3b23;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.promo-subtitle b {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .promo-text {
@@ -553,8 +582,6 @@ ul {
   font-size: 14px;
   font-weight: 500;
   width: 80%;
-  color: #ee3b23;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
 }
 
 .callback-form {
@@ -722,6 +749,10 @@ ul {
   flex: 0 0 100%;
 }
 
+.choice-text select {
+  width: 100%;
+}
+
 .calc-input {
   flex-direction: column;
   margin-bottom: 15px;
@@ -831,6 +862,10 @@ ul {
   align-items: flex-start;
 }
 
+.calc-choice-date input {
+  width: 100%;
+}
+
 .calc-input-description {
   margin-bottom: 40px;
 }
@@ -849,6 +884,21 @@ ul {
   outline: none;
   width: 90%;
   margin-left: 5%;
+  margin-bottom: 60px;
+}
+
+.social-box {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.social-link {
+  width: 10%;
+  margin-right: 20px;
+}
+
+.social-link:last-child {
+  margin: 0;
 }
 
 select {
@@ -1124,6 +1174,7 @@ select {
   .form-btn {
     width: 40%;
     margin: auto;
+    margin-bottom: 60px;
   }
 
   /*----STEPS----*/
@@ -1217,6 +1268,14 @@ select {
 @media (max-width: 800px) {
   /*----HEADER----*/
 
+  .logo {
+    flex-basis: 25%;
+  }
+
+  .logo img {
+    min-width: 120px;
+  }
+
   .header {
     position: fixed;
     box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);
@@ -1228,6 +1287,7 @@ select {
 
   .header-close {
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.02);
+    align-items: center;
   }
 
   .nav {
@@ -1246,6 +1306,10 @@ select {
     margin-right: 5px;
   }
 
+  .nav-close {
+    flex-basis: 10%;
+  }
+
   /*-----PROMO-----*/
 
   .promo-img {
@@ -1259,8 +1323,16 @@ select {
     background-clip: content-box;
   }
 
+  .promo-box:before {
+    -webkit-transform: translate(0, 65px);
+    transform: translate(0, 65px);
+  }
+
   .promo-title {
     text-align: justify;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
   }
 
   /*----CALCULATOR----*/

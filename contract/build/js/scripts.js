@@ -4,6 +4,7 @@ var list = document.querySelector(".js-nav-list");
 var icon = document.querySelector(".js-nav-icon");
 var nav = document.querySelector(".js-nav");
 var header = document.querySelector(".js-header");
+var navTel = document.querySelector(".nav-tel-mobile");
 icon.addEventListener("click", onIconClick);
 
 function onIconClick(event) {
@@ -11,15 +12,18 @@ function onIconClick(event) {
   list.classList.toggle("nav-list-close");
   nav.classList.toggle("nav-close");
   header.classList.toggle("header-close");
+  navTel.classList.toggle("nav-tel-close");
 } //Маска для тел
 
 
-var element = document.getElementById('phone');
+var element = document.querySelector(".input-phone-number");
+var element2 = document.querySelector(".js-input-phone-number");
 var maskOptions = {
-  mask: '+7(000)000-00-00',
+  mask: "+38(000)000-00-00",
   lazy: false
 };
-var mask = new IMask(element, maskOptions); //E-mail Ajax Send
+var mask = new IMask(element, maskOptions);
+var mask = new IMask(element2, maskOptions); //E-mail Ajax Send
 
 $("form.callback-form").submit(function () {
   //Change
@@ -63,12 +67,22 @@ $(document).ready(function () {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault(); //забираем идентификатор бока с атрибута href
 
-    var id = $(this).attr('href'),
+    var id = $(this).attr("href"),
         //узнаем высоту от начала страницы до блока на который ссылается якорь
-    top = $(id).offset().top; //анимируем переход на расстояние - top за 1500 мс
+    top = $(id).offset().top; //анимируем переход на расстояние - top за 1200 мс
 
-    $('body,html').animate({
+    $("body,html").animate({
       scrollTop: top
     }, 1200);
   });
-});
+}); //Logo
+// const logo = document.querySelectorAll(".logo-rtk");
+// console.log(screen.width);
+// console.log(logo);
+// logo.setAttribute("src", /images/logo-min.png);
+// if (screen.width <= 800) {
+//   console.log(screen.width);
+// } else {
+//   console.log(screen.width);
+//   logo.setAttribute("src", '/images/logo-max.png');
+// }

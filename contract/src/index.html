@@ -26,7 +26,6 @@
     <title>Грузоперевозки</title>
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/styles.min.css" />
-
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"
@@ -37,17 +36,15 @@
     <!--====NAVIGATION====-->
     <!-- Hidden Required Fields -->
     <input type="hidden" name="project_name" value="RTK" />
-    <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
+    <input type="hidden" name="admin_email" value="Forwarddddd@gmail.com" />
     <input type="hidden" name="form_subject" value="Заявка" />
     <!-- END Hidden Required Fields -->
     <div class="nav-container">
       <header class="header js-header header-close">
-        <a href="#" class="logo"><img src="#" alt="logo-rtk"/></a>
+        <a href="#" class="logo"><img src="/images/logo.png" alt="logo RTK"></a>
+        <a href="tel:+380678800613" class="nav-tel-mobile">+38 067 880 06 13</a>
         <nav class="nav js-nav nav-close" id="nav">
           <div class="nav-mobile">
-            <a href="tel:+380678800613" class="nav-tel-mobile"
-              >+38 067 880 06 13</a
-            >
             <a href="#" class="nav-icon js-nav-icon">&#9776;</a>
           </div>
           <ul class="nav-list js-nav-list nav-list-close">
@@ -75,13 +72,13 @@
           Организуем комфортный переезд или быструю доставку груза
           <b>без посредников и переплаты</b>
         </h1>
-        <h3 class="promo-subtitle">
-          Грузоперевозки любой сложности до 5 тонн по Днепру и области
+        <h3 class="promo-subtitle" id="callback">
+          <b>Грузоперевозки до 2 тонн</b> любой сложности по Днепру и области
         </h3>
         <p class="promo-text">
-          Мы ставим машину под загрузку уже через час после подачи заявки!
+          Мы ставим машину под загрузку уже через пол часа после подачи заявки!
         </p>
-        <form class="callback-form" id="callback">
+        <form class="callback-form">
           <!-- Hidden Required Fields -->
           <input
             type="hidden"
@@ -97,18 +94,13 @@
           <!-- END Hidden Required Fields -->
           <div class="input-phone js-callback">
             <span class="input-label">Мобильный телефон</span>
-            <input
-              type="text"
-              name="Телефон"
-              class="input-phone-number"
-              placeholder="+380"
-            />
+            <input type="text" name="Телефон" class="input-phone-number" />
           </div>
           <button class="callback-btn">Заказать грузоперевозку</button>
         </form>
       </div>
       <div class="promo-img">
-        <img src="/images/promo2-min.jpg" alt="transit car" />
+        <img src="/images/promo.webp" alt="transit car" />
       </div>
     </div>
     <!--====SERVICE====-->
@@ -193,7 +185,7 @@
         name="project_name"
         value="RTK - Региональная Транспортная Компания"
       />
-      <input type="hidden" name="admin_email" value="elita.dkv@gmail.com" />
+      <input type="hidden" name="admin_email" value="Forwarddddd@gmail.com" />
       <input type="hidden" name="form_subject" value="Заявка c нижней формы" />
       <!-- END Hidden Required Fields -->
       <h3 class="calc-title">Заказ грузового такси</h3>
@@ -204,8 +196,7 @@
           <input
             type="phone"
             name="Телефон"
-            class="input-phone-number"
-            placeholder="+380"
+            class="input-phone-number js-input-phone-number"
             required
           />
         </div>
@@ -214,16 +205,23 @@
             <span class="input-label">Кузов</span>
             <div class="choice-menu">
               <select name="Кузов" size="1">
-                <option selected="selected" value="Открытый кузов (3 метра)"
-                  >Открытый кузов (3 метра)</option
+                <option
+                  selected="selected"
+                  value="Открытый кузов (3 метра/1.5 тонны)"
+                  >Открытый кузов (3 метра/до 1.5 тонны)</option
                 >
-                <option value="Открытый кузов (4 метра)"
-                  >Открытый кузов (4 метра)</option
+                <option value="Открытый кузов (3 метра/2 тонны)"
+                  >Открытый кузов (3 метра/до 2 тонны)</option
                 >
-                <option value="Открытый кузов (5.7 метра)"
-                  >Открытый кузов (5.7 метра)</option
+                <option value="Открытый кузов (4 метра/до 1,5 тонны)"
+                  >Открытый кузов (4 метра/до 1,5 тонны)</option
                 >
-                <option value="Тент (до 3 метров)">Тент (до 3 метров)</option>
+                <option value="Открытый кузов (4 метра/до 2 тонны)"
+                  >Открытый кузов (4 метра/до 2 тонны)</option
+                >
+                <option value="Тент (3 метров/до 1,5 тонны)"
+                  >Тент (3 метров/до 1,5 тонны)</option
+                >
               </select>
             </div>
           </div>
@@ -243,13 +241,13 @@
           </li>
         </ul>
         <div class="options-box">
+          <span>1,5м</span> <span><b>3м</b></span> <span>1,5т</span>
+        </div>
+        <div class="options-box">
           <span>2м</span> <span><b>3м</b></span> <span>2т</span>
         </div>
         <div class="options-box">
           <span>2м</span> <span><b>4м</b></span> <span>2т</span>
-        </div>
-        <div class="options-box">
-          <span>2м</span> <span><b>5.7м</b></span> <span>2т</span>
         </div>
       </div>
       <div class="adress-input">
@@ -288,7 +286,7 @@
                 >Без грузчиков</option
               >
               <option value="1 Грузчик">1 Грузчик</option>
-              <option value="2 Грузчик">2 Грузчик</option>
+              <option value="2 Грузчика">2 Грузчика</option>
             </select>
           </div>
         </div>
@@ -318,7 +316,7 @@
               <option selected="selected" value="first">Ближайшее время</option>
               <option value="Через 30 мин">Через 30 мин</option>
               <option value="Через 1 час">Через 1 час</option>
-              <option value="Через 2 час">Через 2 час</option>
+              <option value="Через 2 часа">Через 2 часа</option>
               <option value="Другое">Другое</option>
             </select>
           </div>
@@ -337,6 +335,20 @@
         />
       </div>
       <button class="form-btn">Отправить заявку</button>
+      <div class="social-box">
+        <a href="viber://chat?number=+380678800613" class="social-link"
+          ><img src="/images/viber.png" alt="viber" target="_blank"
+        /></a>
+        <a href="https://wa.me/+380678800613" class="social-link"
+          ><img src="/images/whatsapp.png" alt="whatsapp" target="_blank"
+        /></a>
+        <a href="https://t.me/forward_0678800613" class="social-link"
+          ><img src="/images/telegram.png" alt="telegram" target="_blank"
+        /></a>
+        <a href="https://m.me/den.lev.23" class="social-link"
+          ><img src="/images/messenger.png" alt="messenger" target="_blank"
+        /></a>
+      </div>
     </form>
 
     <!--=====STEPS====-->
@@ -421,7 +433,7 @@
         >2018. By KL1M</a
       >
     </footer>
-
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>

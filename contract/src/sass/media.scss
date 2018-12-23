@@ -1,5 +1,13 @@
 @media (max-width: 800px) {
   /*----HEADER----*/
+  .logo {
+    flex-basis: 25%;
+  }
+
+  .logo img {
+    min-width: 120px;
+  }
+
   .header {
     position: fixed;
     box-shadow: 0 10px 25px 0 rgba(238, 59, 35, 0.3);
@@ -7,11 +15,11 @@
     top: -5px;
     padding-bottom: 15px;
     padding-top: 20px;
-    
   }
 
   .header-close {
-    box-shadow: 0 5px 5px rgba(0,0,0,0.05), 0 5px 5px rgba(0,0,0,0.02);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05), 0 5px 5px rgba(0, 0, 0, 0.02);
+    align-items: center;
   }
 
   .nav {
@@ -30,12 +38,16 @@
     margin-right: 5px;
   }
 
+  .nav-close {
+    flex-basis: 10%;
+  }
+
   /*-----PROMO-----*/
 
   .promo-img {
     display: none;
   }
-  
+
   .promo-box {
     padding-top: 80px;
     margin-top: -80px;
@@ -43,11 +55,16 @@
     background-clip: content-box;
   }
 
-  .promo-title {
-    text-align: justify;
+  .promo-box:before {
+    transform: translate(0, 65px);
   }
 
-  
+  .promo-title {
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
 
   /*----CALCULATOR----*/
 
@@ -184,6 +201,7 @@
   .form-btn {
     width: 40%;
     margin: auto;
+    margin-bottom: 60px;
   }
 
   /*----STEPS----*/
