@@ -44,8 +44,14 @@
 
   /*-----PROMO-----*/
 
-  .promo-img {
-    display: none;
+  .promo-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .promo-img img {
+    max-width: 300px;
+    margin: auto;
   }
 
   .promo-box {
@@ -60,7 +66,7 @@
   }
 
   .promo-title {
-    text-align: justify;
+    text-align: center;
     width: 90%;
     margin: auto;
     margin-bottom: 20px;
@@ -99,13 +105,22 @@
   /*----HEADER----*/
   .header {
     height: 100px;
-    padding: 0;
-    background-color: transparent;
     margin: auto;
+    padding-top: 0;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .logo {
     margin-top: 45px;
+  }
+
+  .logo-rtk {
+    max-height: 80px;
+    max-width: 160px;
+  }
+
+  .nav-container {
   }
 
   .nav {
@@ -149,7 +164,7 @@
   /*-----PROMO-----*/
 
   .promo-container {
-    margin-top: 50px;
+    margin-top: 150px;
     max-width: 1350px;
   }
 
@@ -202,6 +217,22 @@
     width: 40%;
     margin: auto;
     margin-bottom: 60px;
+  }
+
+  /*----SOCIAL----*/
+
+  .social-box {
+    width: 100%;
+  }
+
+  .social-list {
+    width: 40%;
+    margin: auto;
+  }
+
+  .social-link {
+    width: 8%;
+    margin-right: 20px;
   }
 
   /*----STEPS----*/

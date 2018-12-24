@@ -442,7 +442,7 @@ ul {
   width: 100%;
   padding-bottom: 20px;
   padding-top: 20px;
-  max-width: 1400px;
+  position: fixed;
 }
 
 .logo {
@@ -525,7 +525,7 @@ ul {
   display: flex;
   align-items: center;
   margin: auto;
-  margin-top: 80px;
+  margin-top: 100px;
   margin-bottom: 85px;
 }
 
@@ -598,7 +598,7 @@ ul {
   border: 1px solid #f7f7f7;
   border-radius: 8px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   text-align: left;
   -webkit-animation: radial-pulse 1s infinite;
   animation: radial-pulse 1s infinite;
@@ -630,10 +630,26 @@ ul {
   font-weight: 500;
 }
 
+.input-phone span {
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+
+.input-phone span::before {
+  content: "\2706";
+  font-size: 32px;
+}
+
 .input-phone-number {
   background-color: transparent;
   border: none;
   width: 100%;
+}
+
+.input-phone-number:focus {
+  outline-color: #ee3b23;
+  padding: 10px;
+  padding-left: 0;
 }
 
 .callback-btn {
@@ -650,7 +666,7 @@ ul {
 }
 
 .promo-img img {
-  width: 600px;
+  width: 800px;
 }
 
 /*----SERVICE----*/
@@ -888,13 +904,25 @@ ul {
 }
 
 .social-box {
-  flex-basis: 100%;
+  width: 90%;
   text-align: center;
+  margin: auto;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .social-link {
   width: 10%;
   margin-right: 20px;
+}
+
+.social-name {
+  text-decoration: underline;
+  color: #000000;
 }
 
 .social-link:last-child {
@@ -903,6 +931,74 @@ ul {
 
 select {
   cursor: pointer;
+}
+
+select:focus {
+  outline-color: #ee3b23;
+}
+
+/*----POPUP----*/
+
+.success {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  color: #000000;
+  font-family: GothamPro, sans-serif;
+  text-align: center;
+}
+
+.success.active {
+  display: block;
+}
+
+.popup {
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #fff;
+}
+
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.close-popup:before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.close-popup:after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: -4px;
 }
 
 /*----STEPS----*/
@@ -1072,13 +1168,19 @@ select {
 
   .header {
     height: 100px;
-    padding: 0;
-    background-color: transparent;
     margin: auto;
+    padding-top: 0;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .logo {
     margin-top: 45px;
+  }
+
+  .logo-rtk {
+    max-height: 80px;
+    max-width: 160px;
   }
 
   .nav {
@@ -1122,7 +1224,7 @@ select {
   /*-----PROMO-----*/
 
   .promo-container {
-    margin-top: 50px;
+    margin-top: 150px;
     max-width: 1350px;
   }
 
@@ -1175,6 +1277,22 @@ select {
     width: 40%;
     margin: auto;
     margin-bottom: 60px;
+  }
+
+  /*----SOCIAL----*/
+
+  .social-box {
+    width: 100%;
+  }
+
+  .social-list {
+    width: 40%;
+    margin: auto;
+  }
+
+  .social-link {
+    width: 8%;
+    margin-right: 20px;
   }
 
   /*----STEPS----*/
@@ -1312,8 +1430,14 @@ select {
 
   /*-----PROMO-----*/
 
-  .promo-img {
-    display: none;
+  .promo-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .promo-img img {
+    max-width: 300px;
+    margin: auto;
   }
 
   .promo-box {
@@ -1329,7 +1453,7 @@ select {
   }
 
   .promo-title {
-    text-align: justify;
+    text-align: center;
     width: 90%;
     margin: auto;
     margin-bottom: 20px;

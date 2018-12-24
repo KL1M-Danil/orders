@@ -15,7 +15,7 @@ function onIconClick(event) {
   navTel.classList.toggle("nav-tel-close");
 }
 
-//Маска для тел
+//Маска для тел (рабочий вариант)
 const element = document.querySelector(".input-phone-number");
 const element2 = document.querySelector(".js-input-phone-number");
 
@@ -27,6 +27,7 @@ var maskOptions = {
 var mask = new IMask(element, maskOptions);
 var mask = new IMask(element2, maskOptions);
 
+
 //E-mail Ajax Send
 $("form.callback-form").submit(function() {
   //Change
@@ -37,7 +38,7 @@ $("form.callback-form").submit(function() {
     data: th.serialize()
   }).done(function() {
     $(th)
-      .find(".success - класс уведомление об отправке")
+      .find(".success")
       .addClass("active")
       .css("display", "flex")
       .hide()
@@ -63,7 +64,7 @@ $("form.calculator").submit(function() {
     data: th.serialize()
   }).done(function() {
     $(th)
-      .find(".success - класс уведомление об отправке")
+      .find(".success")
       .addClass("active")
       .css("display", "flex")
       .hide()
@@ -77,6 +78,18 @@ $("form.calculator").submit(function() {
     }, 1000);
   });
   return false;
+});
+
+// Закрыть попап «спасибо»
+$('.js-close-thank-you').click(function() { // по клику на крестик
+	$('.js-overlay-thank-you').fadeOut();
+});
+
+$(document).mouseup(function (e) { // по клику вне попапа
+	var popup = $('.popup');
+	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+		$('.js-overlay-thank-you').fadeOut();
+	}
 });
 
 //Плавность якорей
@@ -97,6 +110,8 @@ $(document).ready(function() {
   });
 });
 
+//При обновление страници наверх
+window.scrollTo(0,0);
 
 //Logo
 
@@ -105,12 +120,10 @@ $(document).ready(function() {
 // console.log(logo);
 // logo.setAttribute("src", /images/logo-min.png);
 
+// if (screen.width <= 800) {
+//   console.log(screen.width);
 
-  // if (screen.width <= 800) {
-  //   console.log(screen.width);
-   
-    
-  // } else {
-  //   console.log(screen.width);
-  //   logo.setAttribute("src", '/images/logo-max.png');
-  // }
+// } else {
+//   console.log(screen.width);
+//   logo.setAttribute("src", '/images/logo-max.png');
+// }

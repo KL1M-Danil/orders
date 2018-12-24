@@ -13,7 +13,7 @@ function onIconClick(event) {
   nav.classList.toggle("nav-close");
   header.classList.toggle("header-close");
   navTel.classList.toggle("nav-tel-close");
-} //Маска для тел
+} //Маска для тел (рабочий вариант)
 
 
 var element = document.querySelector(".input-phone-number");
@@ -34,7 +34,7 @@ $("form.callback-form").submit(function () {
     //Change
     data: th.serialize()
   }).done(function () {
-    $(th).find(".success - класс уведомление об отправке").addClass("active").css("display", "flex").hide().fadeIn();
+    $(th).find(".success").addClass("active").css("display", "flex").hide().fadeIn();
     setTimeout(function () {
       $(th).find(".success").removeClass("active").fadeOut();
       th.trigger("reset");
@@ -52,13 +52,26 @@ $("form.calculator").submit(function () {
     //Change
     data: th.serialize()
   }).done(function () {
-    $(th).find(".success - класс уведомление об отправке").addClass("active").css("display", "flex").hide().fadeIn();
+    $(th).find(".success").addClass("active").css("display", "flex").hide().fadeIn();
     setTimeout(function () {
       $(th).find(".success").removeClass("active").fadeOut();
       th.trigger("reset");
     }, 1000);
   });
   return false;
+}); // Закрыть попап «спасибо»
+
+$('.js-close-thank-you').click(function () {
+  // по клику на крестик
+  $('.js-overlay-thank-you').fadeOut();
+});
+$(document).mouseup(function (e) {
+  // по клику вне попапа
+  var popup = $('.popup');
+
+  if (e.target != popup[0] && popup.has(e.target).length === 0) {
+    $('.js-overlay-thank-you').fadeOut();
+  }
 }); //Плавность якорей
 
 $(document).ready(function () {
@@ -75,7 +88,9 @@ $(document).ready(function () {
       scrollTop: top
     }, 1200);
   });
-}); //Logo
+}); //При обновление страници наверх
+
+window.scrollTo(0, 0); //Logo
 // const logo = document.querySelectorAll(".logo-rtk");
 // console.log(screen.width);
 // console.log(logo);
