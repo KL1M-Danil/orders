@@ -29,53 +29,85 @@ var mask = new IMask(element2, maskOptions);
 
 
 //E-mail Ajax Send
-$("form.callback-form").submit(function() {
-  //Change
+// $("form.callback-form").submit(function() {
+//   //Change
+//   var th = $(this);
+//   $.ajax({
+//     type: "POST",
+//     url: "/mail.php", //Change
+//     data: th.serialize()
+//   }).done(function() {
+//     $(th)
+//       .find(".success")
+//       .addClass("active")
+//       .css("display", "flex")
+//       .hide()
+//       .fadeIn();
+//     setTimeout(function() {
+//       $(th)
+//         .find(".success")
+//         .removeClass("active")
+//         .fadeOut();
+//       th.trigger("reset");
+//     }, 1000);
+//   });
+//   return false;
+// });
+
+//E-mail Ajax Send
+// $("form.calculator").submit(function() {
+//   //Change
+//   var th = $(this);
+//   $.ajax({
+//     type: "POST",
+//     url: "/mail.php", //Change
+//     data: th.serialize()
+//   }).done(function() {
+//     $(th)
+//       .find(".success")
+//       .addClass("active")
+//       .css("display", "flex")
+//       .hide()
+//       .fadeIn();
+//     setTimeout(function() {
+//       $(th)
+//         .find(".success")
+//         .removeClass("active")
+//         .fadeOut();
+//       th.trigger("reset");
+//     }, 1000);
+//   });
+//   return false;
+// });
+
+$("body form.callback-form").submit(function() { 
   var th = $(this);
   $.ajax({
     type: "POST",
-    url: "/mail.php", //Change
+    url: "mail.php", 
     data: th.serialize()
   }).done(function() {
-    $(th)
-      .find(".success")
-      .addClass("active")
-      .css("display", "flex")
-      .hide()
-      .fadeIn();
+    $('body').find('.success').addClass('active').hide().fadeIn();
     setTimeout(function() {
-      $(th)
-        .find(".success")
-        .removeClass("active")
-        .fadeOut();
+      $('body').find('.success').removeClass('active').fadeOut();
       th.trigger("reset");
-    }, 1000);
+    }, 8000);
   });
   return false;
 });
 
-//E-mail Ajax Send
-$("form.calculator").submit(function() {
-  //Change
+$("body form.calculator").submit(function() { 
   var th = $(this);
   $.ajax({
     type: "POST",
-    url: "/mail.php", //Change
+    url: "mail.php", 
     data: th.serialize()
   }).done(function() {
-    $(th)
-      .find(".success")
-      .addClass("active")
-      .css("display", "flex")
-      .hide()
-      .fadeIn();
+    $('body').find('.success').addClass('active').hide().fadeIn();
     setTimeout(function() {
-      $(th)
-        .find(".success")
-        .removeClass("active")
-        .fadeOut();
+      $('body').find('.success').removeClass('active').fadeOut();
       th.trigger("reset");
-    }, 1000);
+    }, 8000);
   });
   return false;
 });
