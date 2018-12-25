@@ -99,6 +99,11 @@
     margin: auto;
     margin-bottom: 15px;
   }
+    /*----LOYALTY----*/
+
+    .loyalty-image {
+      max-width: 250px;
+    }
 }
 
 @media (min-width: 800px) {
@@ -275,6 +280,12 @@
     max-width: 850px;
   }
 
+  .loyalty-image {
+    width: 700px;
+    margin: auto;
+    margin-top: 100px;
+  }
+
   .loyalty-list {
     display: flex;
     flex-wrap: wrap;
@@ -334,10 +345,6 @@
 
   .loyalty-wrapper {
     max-width: 1320px;
-  }
-
-  .loyalty-title {
-    margin-top: 120px;
   }
 
   .loyalty-item {

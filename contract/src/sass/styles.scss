@@ -192,7 +192,6 @@
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 500;
-
 }
 
 .input-phone span {
@@ -367,6 +366,7 @@
 }
 
 .options-title {
+  font-size: 16px;
   font-weight: 100;
   color: rgb(153, 153, 153);
 }
@@ -374,7 +374,7 @@
 .options-box {
   display: flex;
   flex-direction: column;
-  padding: 8px 8px;
+  padding: 8px 4px;
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   border-radius: 8px;
@@ -389,11 +389,11 @@
 
 .options-box span {
   margin-bottom: 11px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
 }
 
-.options-box span b {
+.options-box-top {
   color: #ee3b23;
 }
 
@@ -525,7 +525,7 @@ select:focus {
 .popup {
   position: absolute;
   width: 350px;
-  height: 200px;
+  height: 250px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -619,8 +619,14 @@ select:focus {
   margin: auto;
 }
 
-.loyalty-title {
+.loyalty-image {
+  width: 700px;
+  margin: auto;
   margin-top: 80px;
+}
+
+.loyalty-title {
+  margin-top: 60px;
   margin-bottom: 60px;
   font-size: 32px;
   text-align: center;

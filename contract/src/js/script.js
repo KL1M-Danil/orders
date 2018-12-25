@@ -28,58 +28,6 @@ var mask = new IMask(element, maskOptions);
 var mask = new IMask(element2, maskOptions);
 
 
-//E-mail Ajax Send
-// $("form.callback-form").submit(function() {
-//   //Change
-//   var th = $(this);
-//   $.ajax({
-//     type: "POST",
-//     url: "/mail.php", //Change
-//     data: th.serialize()
-//   }).done(function() {
-//     $(th)
-//       .find(".success")
-//       .addClass("active")
-//       .css("display", "flex")
-//       .hide()
-//       .fadeIn();
-//     setTimeout(function() {
-//       $(th)
-//         .find(".success")
-//         .removeClass("active")
-//         .fadeOut();
-//       th.trigger("reset");
-//     }, 1000);
-//   });
-//   return false;
-// });
-
-//E-mail Ajax Send
-// $("form.calculator").submit(function() {
-//   //Change
-//   var th = $(this);
-//   $.ajax({
-//     type: "POST",
-//     url: "/mail.php", //Change
-//     data: th.serialize()
-//   }).done(function() {
-//     $(th)
-//       .find(".success")
-//       .addClass("active")
-//       .css("display", "flex")
-//       .hide()
-//       .fadeIn();
-//     setTimeout(function() {
-//       $(th)
-//         .find(".success")
-//         .removeClass("active")
-//         .fadeOut();
-//       th.trigger("reset");
-//     }, 1000);
-//   });
-//   return false;
-// });
-
 $("body form.callback-form").submit(function() { 
   var th = $(this);
   $.ajax({
@@ -128,7 +76,7 @@ $(document).mouseup(function (e) { // по клику вне попапа
 
 $(document).ready(function() {
   //ID блока с ссылками #prime_nav
-  $("#nav").on("click", "a", function(event) {
+  $("#nav, #service").on("click", "a", function(event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
 
@@ -145,17 +93,12 @@ $(document).ready(function() {
 //При обновление страници наверх
 window.scrollTo(0,0);
 
-//Logo
+//Фокус при клике
 
-// const logo = document.querySelectorAll(".logo-rtk");
-// console.log(screen.width);
-// console.log(logo);
-// logo.setAttribute("src", /images/logo-min.png);
+$('#nav-btn').click(function(){ 
+  $('#input-phone-number').focus();
+});
 
-// if (screen.width <= 800) {
-//   console.log(screen.width);
-
-// } else {
-//   console.log(screen.width);
-//   logo.setAttribute("src", '/images/logo-max.png');
-// }
+$('#footer-btn').click(function(){ 
+  $('#input-phone-number').focus();
+});
