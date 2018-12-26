@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131330016-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131330016-1");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -56,7 +70,9 @@
               <a href="#social-box" class="nav-link">Контакты</a>
             </li>
             <li class="nav-item">
-              <a href="#callback" class="nav-btn js-nav-btn" id="nav-btn">обратный звонок</a>
+              <a href="#callback" class="nav-btn js-nav-btn" id="nav-btn"
+                >обратный звонок</a
+              >
             </li>
           </ul>
         </nav>
@@ -82,13 +98,17 @@
             name="project_name"
             value="RTK - Региональная Транспортная Компания"
           />
-          <input type="hidden" name="admin_email" value="forwarddddd@gmail.com" />
+          <input
+            type="hidden"
+            name="admin_email"
+            value="forwarddddd@gmail.com"
+          />
           <input
             type="hidden"
             name="form_subject"
             value="Заявка c верхней формы"
           />
-          <input type="hidden" name="Главная страница" value="">
+          <input type="hidden" name="Главная страница" value="" />
           <!-- END Hidden Required Fields -->
           <div class="input-phone js-callback">
             <span class="input-label"></span>
@@ -200,7 +220,7 @@
       />
       <input type="hidden" name="admin_email" value="forwarddddd@gmail.com" />
       <input type="hidden" name="form_subject" value="Заявка c нижней формы" />
-      <input type="hidden" name="Главная страница" value="">
+      <input type="hidden" name="Главная страница" value="" />
       <!-- END Hidden Required Fields -->
       <h3 class="calc-title">Заказ грузового такси</h3>
       <h4 class="calc-subtitle">Узнайте тариф, указав данные о перевозке</h4>
@@ -234,7 +254,6 @@
                 <option value="Мне нужен автомобиль другого размера"
                   >Мне нужен автомобиль другого размера</option
                 >
-                
               </select>
             </div>
           </div>
@@ -257,6 +276,7 @@
           <span>1,7м^3</span> <span>1,3м</span> <span>0,4т</span>
         </div>
         <div class="options-box options-box-top">
+          <img src="/images/topsale.png" alt="topsale" class="top-sale" />
           <span>10м^3</span> <span>3м</span> <span>2т</span>
         </div>
         <div class="options-box">
@@ -326,7 +346,9 @@
           <span class="input-label">Время подачи</span>
           <div class="choice-menu">
             <select name="Время подачи" size="1">
-              <option selected="selected" value="Ближайшее время">Ближайшее время</option>
+              <option selected="selected" value="Ближайшее время"
+                >Ближайшее время</option
+              >
               <option value="Через 30 мин">Через 30 мин</option>
               <option value="Через 1 час">Через 1 час</option>
               <option value="Через 2 часа">Через 2 часа</option>
@@ -351,26 +373,44 @@
       <div class="social-box">
         <ul class="social-list">
           <li class="social-item">
-            <a href="viber://chat?number=+380678800613" class="social-link" target="_blank"
+            <a
+              href="viber://chat?number=+380678800613"
+              class="social-link"
+              target="_blank"
               ><img src="/images/viber.png" alt="viber"
             /></a>
-            <a href="viber://chat?number=+380678800613" class="social-name" target="_blank"
+            <a
+              href="viber://chat?number=+380678800613"
+              class="social-name"
+              target="_blank"
               >Написать нам в VIBER</a
             >
           </li>
           <li class="social-item">
-            <a href="https://wa.me/+380678800613" class="social-link" target="_blank"
-              ><img src="/images/whatsapp.png" alt="whatsapp" 
+            <a
+              href="https://wa.me/+380678800613"
+              class="social-link"
+              target="_blank"
+              ><img src="/images/whatsapp.png" alt="whatsapp"
             /></a>
-            <a href="https://wa.me/+380678800613" class="social-name" target="_blank"
+            <a
+              href="https://wa.me/+380678800613"
+              class="social-name"
+              target="_blank"
               >Написать нам в WHATSAPP</a
             >
           </li>
           <li class="social-item">
-            <a href="https://t.me/forward_0678800613" class="social-link" target="_blank"
-              ><img src="/images/telegram.png" alt="telegram" 
+            <a
+              href="https://t.me/forward_0678800613"
+              class="social-link"
+              target="_blank"
+              ><img src="/images/telegram.png" alt="telegram"
             /></a>
-            <a href="https://t.me/forward_0678800613" class="social-name" target="_blank"
+            <a
+              href="https://t.me/forward_0678800613"
+              class="social-name"
+              target="_blank"
               >Написать нам в TELEGRAM</a
             >
           </li>
@@ -409,14 +449,14 @@
     <!--=====LOYALTY====-->
 
     <div class="loyalty-wrapper" id="loyalty">
-      <img src="/images/close-car.png" alt="close car" class="loyalty-image">
+      <img src="/images/close-car.png" alt="close car" class="loyalty-image" />
       <h3 class="loyalty-title">Заботимся о ваших грузах</h3>
       <ul class="loyalty-list">
         <li class="loyalty-item">
           <h4 class="loyalty-name">Легко заказать</h4>
           <p class="loyalty-text">
-            Закажите грузовую машину звонком в Контактный центр
-            или оформите заказ на сайте.
+            Закажите грузовую машину звонком в Контактный центр или оформите
+            заказ на сайте.
           </p>
         </li>
         <li class="loyalty-item">
@@ -456,7 +496,7 @@
     </div>
     <footer class="footer">
       <a href="tel:+380678800613" class="footer-tel">+38 067 880 06 13</a>
-      <a href="#callback" class="footer-btn" id="footer-btn" >Перезвонить мне</a>
+      <a href="#callback" class="footer-btn" id="footer-btn">Перезвонить мне</a>
       <a href="https://t.me/kl1md" class="author" target="_blank"
         >2018. By KL1M</a
       >

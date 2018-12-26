@@ -109,21 +109,6 @@
   margin-bottom: 50px;
 }
 
-/*
-.promo-box:before {
-  content: "";
-  background: url(/images/dnipro.jpg) 0 0 no-repeat;
-  background-position: top;
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-  transform: translate(0, 55px);
-}*/
-
 .promo-title {
   margin: 0;
   margin-bottom: 20px;
@@ -394,7 +379,14 @@
 }
 
 .options-box-top {
-  color: #ee3b23;
+  color: $main-font-color;
+  border: 1px solid $main-btn-color;
+}
+
+.top-sale {
+  position: absolute;
+  width: 80px;
+  transform: translate(-16px, -26px);
 }
 
 .options-box span:last-child {
