@@ -18,7 +18,7 @@
 
     <title>BСup - производство бумажных стаканчиков</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+      href="https://fonts.googleapis.com/css?family=Comfortaa:400,700|Roboto:300,400,700"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.min.css" />
@@ -26,15 +26,19 @@
 
   <body>
     <section class="promo">
-      <div class="promo-wrap">
+      <div class="header-wrap">
         <header class="header">
           <a href="#"
             ><h2 class="logo"><b>b</b>cup</h2></a
           >
           <ul class="nav" id="nav">
-            <li class="nav-link"><a href="#tech" id="to-tech">меню</a></li>
-            <li class="nav-link"><a href="#review">меню</a></li>
-            <li class="nav-link"><a href="#contacts">меню</a></li>
+            <li class="nav-link"><a href="#about">о нас</a></li>
+            <li class="nav-link"><a href="#form">калькулятор цен</a></li>
+            <li class="nav-link"><a href="#contacts">контакты</a></li>
+            <li class="nav-link nav-link-tel">
+              <img src="/images/phone.png" alt="" class="link-tel-icon" />
+              <a href="tel:+380930104566">+38 (093) 010 45 66</a>
+            </li>
           </ul>
           <div class="nav-toggle">
             <div class="hamburger">
@@ -43,7 +47,9 @@
             <div class="cross"><span></span> <span></span></div>
           </div>
         </header>
-        <h2 class="promo-subtitle"><b>цены</b> от производителя</h2>
+      </div>
+      <div class="promo-wrap">
+        <h2 class="promo-subtitle">цены от производителя</h2>
         <h1 class="promo-title">бумажные стаканчики</h1>
         <ul class="promo-list">
           <li class="promo-item">
@@ -61,10 +67,334 @@
             <h3 class="promo-text">производство <b>до 10 рабочих дней</b></h3>
           </li>
         </ul>
-        <a href="#" class="promo-btn">посмотреть прайс</a>
+        <a href="#form" class="promo-btn">заказать</a>
+      </div>
+
+      <div class="sale js-overlay-thank-you">
+        <div class="popup js-thank-you">
+
+          <a href="#form" class="sale-btn">Заказать</a>
+          <div class="close-popup js-close-thank-you"></div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+        <h3 class="about-title">О НАС</h3>
+      <div class="about-wrap">
+        
+        <div class="about-text-box">
+          <p class="about-text">
+            Наша компания с 2013 года занимается производства бумажных
+            стаканчиков с индивидуальным дизайном.
+          </p>
+          <p class="about-text">
+            Картон, из которого собираются наши бумажные стаканчики, состоит
+            только из экологически чистых материалов, поэтому они не вызывают
+            аллергических реакций, не выделяют вредных веществ и абсолютно
+            безопасны для здоровья ваших клиентов.
+          </p>
+          <p class="about-text">
+            Мы работаем с клиентами, которые заказывают нашу продукцию от 10 000
+            шт. и в свою очередь предлагаем лучшие цены на рынке.
+          </p>
+        </div>
+
+        <iframe
+          width="440"
+          height="250"
+          src="https://www.youtube.com/embed/7wtfhZwyrcc"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
     </section>
 
+    <section class="types">
+      <h3 class="types-title">виды стаканчиков</h3>
+      <div class="types-wrap">
+        <div class="cards-box">
+          <div class="card">
+            <div class="card__thumb">
+              <img src="/images/cupindiv.jpg" />
+            </div>
+            <div class="card__price">
+              <span class="card__price__text">от</span>
+              <span class="card__price__money">₴33,00</span>
+            </div>
+            <div class="card__body">
+              <div class="card__category">Cтаканчики</div>
+              <h2 class="card__title">
+                Индивидуальные
+              </h2>
+              <a href="#form" class="card__btn">Заказать </a>
+              <p class="card__description">
+                цены указаны за 100 шт.<br />
+                в размере 110 мл.
+              </p>
+              <p class="card__subdescription">
+                * заказы принимаются от 15000шт.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__thumb">
+              <img src="/images/cup.jpg" />
+            </div>
+            <div class="card__price">
+              <span class="card__price__text">от</span>
+              <span class="card__price__money">₴31,50</span>
+            </div>
+            <div class="card__body">
+              <div class="card__category">Cтаканчики</div>
+              <h2 class="card__title">
+                белые
+              </h2>
+              <a href="#form" class="card__btn">Заказать </a>
+              <p class="card__description">
+                цены указаны за 100 шт. <br />
+                в размере 110 мл.
+              </p>
+              <p class="card__subdescription">
+                * заказы принимаются от 15000шт.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__thumb">
+              <img src="/images/cupstandart.jpg" />
+            </div>
+            <div class="card__price">
+              <span class="card__price__text">от</span>
+              <span class="card__price__money">₴32,50</span>
+            </div>
+            <div class="card__body">
+              <div class="card__category">Cтаканчики</div>
+              <h2 class="card__title">
+                Стандартные
+              </h2>
+              <a href="#form" class="card__btn">Заказать </a>
+              <p class="card__description">
+                цены указаны за 100 шт. <br />
+                в размере 110 мл.
+              </p>
+              <p class="card__subdescription">
+                * заказы принимаются от 15000шт.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="steps-wrap">
+        <h4 class="steps-subtitle">производство бумажных стаканчиков</h4>
+        <h3 class="steps-title">шаг за шагом</h3>
+        <div class="steps-box">
+          <div class="steps-item">
+            <div class="steps-title-box">
+              <img src="/images/one.png" alt="" class="steps-img" />
+              <h4 class="steps-name">заявка</h4>
+            </div>
+            <p class="steps-text">
+              Формируется заявка через сайт, либо звонок по телефону.
+            </p>
+            <p class="steps-subname">
+              * в течении <b>1 часа</b> с вами связывается менеджер.
+            </p>
+          </div>
+          <div class="steps-item">
+            <div class="steps-title-box">
+              <img src="/images/two.png" alt="" class="steps-img" />
+              <h4 class="steps-name">потверждение заказа</h4>
+            </div>
+            <p class="steps-text">
+              Заказ формируется от 10 000 шт., если это белый или стандартный
+              стаканчик, и от 15 000 шт., если это стаканчик с вашим ЛОГОТИПОМ
+            </p>
+            <p class="steps-subname">* за <b>1 телефонный звонок.</b></p>
+          </div>
+          <div class="steps-item">
+            <div class="steps-title-box">
+              <img src="/images/three.png" alt="" class="steps-img" />
+              <h4 class="steps-name">оплата</h4>
+            </div>
+            <p class="steps-text">
+              C новыми клиентами работаем по 100% предоплате: - На карту
+              ПриватБанка - Безналичный расчет ФОП вторая или третья группа без
+              НДС
+            </p>
+            <p class="steps-subname">
+              * в течении <b>2 рабочих дней</b> клиент производит оплату.
+            </p>
+          </div>
+          <div class="steps-item">
+            <div class="steps-title-box">
+              <img src="/images/fouth.png" alt="" class="steps-img" />
+              <h4 class="steps-name">печать бумажного стаканчика</h4>
+            </div>
+            <p class="steps-text">
+              В день на нашем производстве печатается и собирается до 240 тыс.
+              стаканчиков. У нас нет готовой продукции. Все производится под
+              заказ.
+            </p>
+            <p class="steps-subname">
+              * готовность заказа <b>до 10 рабочих дней.</b>
+            </p>
+          </div>
+          <div class="steps-item">
+            <div class="steps-title-box">
+              <img src="/images/five.png" alt="" class="steps-img" />
+              <h4 class="steps-name">доставка стаканчиков</h4>
+            </div>
+            <p class="steps-text">
+              C новыми клиентами работаем по 100% предоплате: <br />- На карту
+              ПриватБанка <br />
+              - Безналичный расчет ФОП вторая или третья группа без НДС
+            </p>
+            <p class="steps-subname">* <b>до 2 дней</b> в ваш город.</p>
+          </div>
+          <div class="steps-item">
+            <div class="steps-title-box">
+              <img src="/images/six.png" alt="" class="steps-img" />
+              <h4 class="steps-name">ждем вас снова</h4>
+            </div>
+            <p class="steps-text">
+              Мы дорожим нашей репутацией, поэтому гарантируем Высокое Качество!
+            </p>
+            <p class="steps-subname">*<b> каждый день</b></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+        <h3 class="partners-title">наши партнеры</h3>
+      <div class="partners-wrap">
+        
+        <div class="partners-slider">
+          <img src="/images/luxoft.png" alt="" class="partners-slider-img" />
+          <img src="/images/sich.jpg" alt="" class="partners-slider-img" />
+          <img
+            src="/images/coffeelife.png"
+            alt=""
+            class="partners-slider-img"
+          />
+          <img src="/images/barabash.jpg" alt="" class="partners-slider-img" />
+          <img src="/images/mistercat.jpg" alt="" class="partners-slider-img" />
+          <img
+            src="/images/chelentano.jpg"
+            alt=""
+            class="partners-slider-img"
+          />
+          <img src="/images/fransua.png" alt="" class="partners-slider-img" />
+        </div>
+      </div>
+    </section>
+    <section class="form">
+        <h3 class="form-title" id="form">заказ</h3>
+      <div class="form-wrap">
+        
+        <p class="form-text">
+          ∗ количество бумажных стаканчиков может отличаться от начального
+          заказа в большую или меньшую сторону на 5%
+        </p>
+        <form action="">
+          <div class="form-box">
+            <h4 class="form-name">Тип стакана</h4>
+            <select name="Тип стакана" size="1">
+              <option value="Однослойные">Однослойные</option>
+              <option value="Двухслойные" disabled>Двухслойные</option>
+            </select>
+
+            <h4 class="form-name">Размер стакана</h4>
+            <select name="Размер стакана" size="1" >
+              <option value="110ml">110ml</option>
+              <option value="175ml" class="select-ml">175ml</option>
+              <option value="210ml">210ml</option>
+              <option value="270ml">270ml</option>
+              <option value="340ml">340ml</option>
+              <option value="400ml">400ml</option>
+              <option value="500ml">500ml</option>
+            </select>
+          </div>
+
+          <div class="form-box">
+            <h4 class="form-name">Тип печати</h4>
+            <select name="Тип печати" size="1">
+              <option value="Белый">Белый</option>
+              <option value="Стандартный">Стандартный</option>
+              <option value="Индивидуальный">Индивидуальный</option>
+            </select>
+
+            <h4 class="form-name">Количество</h4>
+            <select name="Количество" size="1">
+              <option value="10000">10 000</option>
+              <option value="20000">20 000</option>
+              <option value="30000">30 000</option>
+              <option value="50000">50 000</option>
+              <option value="100000">100 000</option>
+            </select>
+          </div>
+
+          <p class="form-result">Цена за 100 шт:</p>
+          <p class="form-result">Общая стоимость за тираж:</p>
+          <p class="form-text">
+            ∗ все цены актуальны
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+      <h3 class="contacts-title">контакты</h3>
+      <div class="contacts-wrap">
+        <ul class="contacts-list">
+          <li class="contacts-item">
+            <a href="tel:+380930104566">
+              <img src="/images/mobile.png" alt="" class="contacts-icon" />
+              <h4 class="contacts-name">+38 (093) 010 45 66</h4>
+            </a>
+          </li>
+          <li class="contacts-item">
+            <a href="mailto:sobranie@gmail.com">
+              <img src="/images/email.png" alt="" class="contacts-icon" />
+              <h4 class="contacts-name">sobranie@gmail.com</h4>
+            </a>
+          </li>
+          <li class="contacts-item">
+            <a href="https://t.me/arthur_belousov">
+              <img
+                src="/images/telegram-logo.png"
+                alt=""
+                class="contacts-icon"
+              />
+              <h4 class="contacts-name">telegram</h4>
+            </a>
+          </li>
+          <li class="contacts-item">
+            <a href="viber://chat?number=+380930104566">
+              <img src="/images/viber-logo.png" alt="" class="contacts-icon" />
+              <h4 class="contacts-name">viber</h4>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/scripts.min.js"></script>
   </body>
 </html>

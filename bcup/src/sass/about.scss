@@ -1,0 +1,51 @@
+.about {
+  background-image: url("/images/bg-space.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+  
+  &-wrap {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 60px;
+    background-color: $main-font-color;
+    color: $second-font-color;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  &-text-box {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  iframe {
+    margin: auto;
+  }
+}
+
+@media (min-width: 676px) {
+  .about {
+    &-text-box {
+      width: 56%;
+      margin: 0;
+      margin-right: 60px;
+    }
+
+    &-text {
+        font-size: 20px;
+    }
+  }
+}

@@ -1,9 +1,18 @@
-@import './normalize';
+@import "./normalize";
 
 /*---VARIABLES---*/
 $main-font-color: #000000;
 $second-font-color: #fff;
-$accent-color: #ee5a36;
+$accent-color: #f7551f;
+$duration: 0.3s;
 
-@import './base';
-@import './promo';
+@import "./base";
+@import "./promo";
+@import "./about";
+@import "./types";
+@import "./steps";
+@import "./slick";
+@import "./slick-theme";
+@import "./partners";
+@import "./form";
+@import "./contacts";

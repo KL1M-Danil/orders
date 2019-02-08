@@ -1,0 +1,64 @@
+.contacts {
+    background-image: url("/images/bg-space.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  &-wrap {
+    max-width: 1150px;
+    margin: auto;
+  }
+
+  &-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 60px;
+    background-color: $main-font-color;
+    color: $second-font-color;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  &-list {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &-item {
+    text-align: center;
+  }
+
+  &-item a {
+    color: $main-font-color;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+  }
+
+  &-name {
+    margin: 0;
+    text-align: center;
+  }
+
+  &-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 676px) {
+  .contacts {
+    &-list {
+      //width: 25%;
+      
+      margin: auto;
+    }
+  }
+}
