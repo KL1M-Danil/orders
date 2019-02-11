@@ -1,9 +1,10 @@
 .form {
-  background-image: url("/images/bg-space.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 50px;
+  // background-image: url("/images/bg-space.png");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  padding: 70px 0;
+  background-color: #f3f3f3;
 
   &-wrap {
     max-width: 1150px;
@@ -17,15 +18,25 @@
   }
 
   &-title {
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
     margin-top: 0;
-    margin-bottom: 60px;
-    background-color: $main-font-color;
-    color: $second-font-color;
-    padding: 20px 0;
+    margin-bottom: 40px;
     width: 100%;
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 5px;
+      background-color: $accent-color;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -15px;
+    }
   }
 
   h4 {
@@ -60,14 +71,45 @@
     margin-bottom: 20px;
     margin-left: 10%;
     font-size: 18px;
+
+    span {
+      margin-top: 5px;
+      display: inline-block;
+      font-size: 20px;
+      text-align: center;
+      color: $accent-color;
+      font-weight: 700;
+      margin-left: 10px;
+    }
   }
 
   &-text {
     font-size: 12px;
-    width: 80%;
+    width: 90%;
     margin: auto;
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  &-btn {
+    color: $second-font-color;
+    background-color: $accent-color;
+
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid $second-font-color;
+    border-radius: 25px;
+    padding: 10px 25px;
     margin-bottom: 50px;
+    margin: auto;
+
+    &:hover {
+      background-color: $second-font-color;
+      transition: 0.2s;
+      color: $main-font-color;
+      border: none;
+    }
   }
 }
 
@@ -75,8 +117,6 @@
   .form {
     background-position: center;
     background-repeat: no-repeat;
-   
-    
 
     h4 {
       font-size: 20px;
@@ -100,6 +140,174 @@
     &-result {
       width: 55%;
       margin: auto;
+
+      span {
+        margin-left: 10px;
+      }
     }
+  }
+}
+
+// POPUP
+
+.order {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  display: none;
+  color: $main-font-color;
+  text-align: center;
+
+  &-btn {
+    color: $second-font-color;
+    background-color: $accent-color;
+
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid $second-font-color;
+    border-radius: 25px;
+    padding: 10px 25px;
+
+    &:hover {
+      background-color: $second-font-color;
+      transition: 0.2s;
+      color: $main-font-color;
+      border: none;
+    }
+  }
+
+  &-name {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 24px;
+    font-family: Comfortaa, sans-serif;
+  }
+
+  &-mail {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 24px;
+    font-family: Comfortaa, sans-serif;
+  }
+
+  &-number {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 24px;
+    font-family: Comfortaa, sans-serif;
+  }
+
+  span {
+    margin-left: 5px;
+  }
+
+  label {
+    margin-bottom: 15px;
+  }
+
+  input {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 25px;
+    width: 300px;
+  }
+}
+
+.order.active {
+  display: block;
+}
+
+.popup-order {
+  position: absolute;
+  width: 550px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent-color;
+  color: $second-font-color;
+}
+
+@media (max-width: 676px) {
+  .order {
+    &-btn {
+      font-size: 16px;
+      font-weight: 700;
+      border: 2px solid $second-font-color;
+      border-radius: 25px;
+      padding: 10px 25px;
+
+      &:hover {
+        background-color: $second-font-color;
+        transition: 0.2s;
+        color: $main-font-color;
+        border: none;
+      }
+    }
+
+    &-name {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-size: 22px;
+      font-family: Comfortaa, sans-serif;
+    }
+
+    &-mail {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-size: 22px;
+      font-family: Comfortaa, sans-serif;
+    }
+
+    &-number {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-size: 22px;
+      font-family: Comfortaa, sans-serif;
+    }
+
+    span {
+      margin-left: 5px;
+    }
+
+    label {
+      margin-bottom: 15px;
+    }
+
+    input {
+      border: 2px solid black;
+      padding: 10px;
+      border-radius: 25px;
+      width: 250px;
+    }
+  }
+
+  .popup-order {
+    width: 90%;
+    height: 500px;
   }
 }

@@ -1,10 +1,11 @@
 .about {
-  background-image: url("/images/bg-space.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 40px;
-  
+  // background-image: url("/images/bg-space.png");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  background-color: #f3f3f3;
+  padding: 70px 0;
+
   &-wrap {
     max-width: 1150px;
     margin: auto;
@@ -14,15 +15,28 @@
   }
 
   &-title {
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
     margin-top: 0;
-    margin-bottom: 60px;
-    background-color: $main-font-color;
-    color: $second-font-color;
-    padding: 20px 0;
+    margin-bottom: 70px;
+    //background-color: $main-font-color;
+    //color: $second-font-color;
+    //padding: 20px 0;
     width: 100%;
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 5px;
+      background-color: $accent-color;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -15px;
+    }
   }
 
   &-text-box {
@@ -33,11 +47,15 @@
 
   iframe {
     margin: auto;
+    border: 0;
   }
 }
 
 @media (min-width: 676px) {
   .about {
+
+
+
     &-text-box {
       width: 56%;
       margin: 0;
@@ -45,7 +63,18 @@
     }
 
     &-text {
-        font-size: 20px;
+      font-size: 20px;
     }
+  }
+}
+
+@media (max-width: 1150px) {
+  .about-text-box {
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .about-wrap {
+    padding-top: 20px;
   }
 }

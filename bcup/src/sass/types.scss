@@ -1,9 +1,10 @@
 .types {
   min-height: 50vh;
-  background-image: url("/images/bg-space.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("/images/bg-space.png");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  padding: 70px 0;
 
   &-wrap {
     max-width: 1150px;
@@ -11,15 +12,25 @@
   }
 
   &-title {
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
     margin-top: 0;
-    margin-bottom: 60px;
-    background-color: $main-font-color;
-    color: $second-font-color;
-    padding: 20px 0;
+    margin-bottom: 70px;
     width: 100%;
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 5px;
+      background-color: $accent-color;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -15px;
+    }
   }
 }
 
@@ -75,7 +86,32 @@
 }
 
 .card__description {
-  display: none;
+  left: 20px;
+  right: 20px;
+  bottom: 65px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #666c74;
+  font-size: 13px;
+  font-family: "Comfortaa", sans-serif;
+  text-align: center;
+
+  opacity: 1;
+  transition: opacity $duration - 0.1s, transform $duration - 0.1s;
+  transition-delay: 0s;
+  transform: translateY(25px);
+
+  .card:hover & {
+    opacity: 1;
+    transition-delay: 0.1s;
+    transform: translateY(0);
+  }
+
+  &:last-child {
+    margin-top: 10px;
+  }
 }
 
 .card__subdescription {
@@ -115,7 +151,6 @@
   color: #000;
   font-weight: bold;
   text-transform: uppercase;
-  
 
   .card:hover & {
     animation: titleBlur $duration;
@@ -212,6 +247,13 @@
 }
 
 @media (max-width: 676px) {
+  .card__subdescription {
+    opacity: 1;
+  }
+
+  .card__body {
+    height: 220px;
+  }
   .cards-box {
     display: flex;
     flex-direction: column;
@@ -234,6 +276,11 @@
   .card {
     width: 300px;
     margin-right: 60px;
+
+    &__description {
+      opacity: 0;
+      margin-top: 15px;
+    }
   }
 
   .card__body {
@@ -243,36 +290,6 @@
 
     .card:hover & {
       height: 140px + 70px;
-    }
-  }
-
-  .card__description {
-    left: 20px;
-    right: 20px;
-    bottom: 65px;
-
-    margin: 0;
-    margin-top: 25px;
-    padding: 0;
-
-    color: #666c74;
-    font-size: 13px;
-    font-family: "Comfortaa", sans-serif;
-    text-align: center;
-
-    opacity: 0;
-    transition: opacity $duration - 0.1s, transform $duration - 0.1s;
-    transition-delay: 0s;
-    transform: translateY(25px);
-
-    .card:hover & {
-      opacity: 1;
-      transition-delay: 0.1s;
-      transform: translateY(0);
-    }
-
-    &:last-child {
-      margin-top: 10px;
     }
   }
 }

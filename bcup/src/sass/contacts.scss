@@ -1,24 +1,37 @@
 .contacts {
-    background-image: url("/images/bg-space.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  // background-image: url("/images/bg-space.png");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  padding: 70px 0;
+
   &-wrap {
     max-width: 1150px;
     margin: auto;
   }
 
   &-title {
+    position: relative;
     text-align: center;
     text-transform: uppercase;
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 60px;
-    background-color: $main-font-color;
-    color: $second-font-color;
-    padding: 20px 0;
+
     width: 100%;
+
+
+    &::before {
+      content: "";
+      width: 50px;
+      height: 5px;
+      background-color: $accent-color;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -15px;
+    }
   }
 
   &-list {
@@ -30,34 +43,38 @@
   }
 
   &-item {
-    text-align: center;
+    width: 80%;
   }
 
   &-item a {
     color: $main-font-color;
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
-    
+    margin-bottom: 20px;
   }
 
   &-name {
     margin: 0;
-    text-align: center;
   }
 
   &-icon {
     width: 30px;
     height: 30px;
-    margin-right: 20px;
+    margin-right: 15px;
   }
 }
 
-@media (min-width: 676px) {
+@media (min-width: 991px) {
   .contacts {
+    background-image: none;
+
+    &-item {
+        width: 25%;
+      }
+
     &-list {
       //width: 25%;
-      
+
       margin: auto;
     }
   }
