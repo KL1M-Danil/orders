@@ -226,6 +226,7 @@
 }
 
 .nav-toggle.open {
+  min-width: 50px;
   .hamburger {
     span {
       transition: 0.25s ease-in-out;
@@ -259,9 +260,27 @@
 }
 
 @media (max-width: 676px) {
+  .header {
+    padding: 0;
+  }
+
+  
+
   .popup {
     width: 80%;
     height: 200px;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+  .nav {
+    width: 55%;
+  }
+
+  .nav-link {
+    margin-right: 0;
   }
 }
 
